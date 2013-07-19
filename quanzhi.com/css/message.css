@@ -1,0 +1,44 @@
+/* CSS Document */
+.a-green a:hover i.icon-up-a{ background-position:-38px -55px;}
+.a-green a:hover i.icon-down-f{ background-position:-49px -55px;}
+.a-green a:active i.icon-up-a{ background-position:-38px -55px;}
+.a-green a:active i.icon-down-f{ background-position:-49px -55px;}
+.cont-message{ width:968px; margin:18px auto 40px; min-height:440px;_height:400px;font-family:Arial,SimSun,sans-serif;}
+.message-list-box{ clear:both; display:block; margin:5px auto 40px auto; overflow:visible; width:800px;}
+.message-navs { margin-bottom:25px; width:100%;}
+.message-navs ul.utab{display:block; float:left; background:url("/images/v1/message-tabnav.png?20121226_1") repeat-x; height:32px; width:100%; z-index:1;}
+.message-navs ul.utab li {float:left; height:32px; line-height:30px; margin:0px 4px 0 0; text-align:center; width:81px;font-size:14px; font-weight:bold; display:block; z-index:2;}
+.message-navs ul.utab li a {background:url("/images/v1/user_tab.png?20121226_1") no-repeat scroll -136px -48px transparent; color:#018201; display:block; cursor:pointer; width:81px; height:32px;}
+.message-navs ul.utab li.on a {background:url("/images/v1/user_tab.png?20121226_1") no-repeat scroll -136px -11px transparent; color:#000; display:block; width:81px; height:32px;}
+.message-navs ul.utab li.ml30 {margin-left:30px;}
+.message-list,.message-listqx {width:100%; border:0 none; color:#000; margin:0px; text-align:left; table-layout:fixed;}
+.message-list th {font-size:12px; background-color:#f6f9f2;line-height:34px;background:url(/images/v1/user_lisbg.png?20121226_1) repeat-x; color:#FFFFFF; font-weight:normal;}
+.message-list th span{ line-height:34px;}
+.message-list td,.message-listqx td {padding: 10px 0px 0px 0px; line-height:18px;word-wrap: break-word;}
+table.message-list input{margin:0px 0px 0px 4px;*margin:0px 0px 0px 0px; vertical-align:middle;}
+*html table.message-list input{ vertical-align:top;}
+.message-list .operation td{ border-bottom:1px solid #e4e4e4;padding:0px;}
+.message-list .operation td .border{ height:34px; padding:0px; line-height:34px; width:100%;}
+.message-list .operation .operation-box{background-color:#EEF4E5; padding-left:212px; width:587px; display:none;}
+*html .message-list .operation .operation-box a{ float:left; margin-top:7px; display:inline; margin-right:3px; line-height:18px;}
+*html .message-list .operation .operation-box{ padding-bottom:7px;}
+/*.message-list .operation-hover {background-color:#EEF4E5; cursor:pointer; }
+.message-list .operation .operation-box{display:none; }
+.message-list .operation-hover .operation-box{display:block;}*/
+.message-bo{ display:block; height:34px; margin-top:8px;}
+.message-bo .btn{ margin-right:8px;}
+.m-answer{ width:350px;}
+.m-answer .textarea_tex .ipt{ margin-bottom:0px; padding:4px; width:320px;}
+.m-answer .textarea_tex .ipt textarea{border: 0 none;color: #000000;height: 100px;margin: 0;padding: 0;width: 320px; resize:none;}
+.m-answer p.pb4{ padding-bottom:4px;}
+.m-answer p.pb4 i.icon-round-must{ float:left; margin:5px 3px 0px 0px; display:inline;}
+.m-answer p.pb4 span{ float:left; font-size:14px;font-family:"Microsoft YaHei",Arial,SimSun,sans-serif; line-height:20px;}
+.message-list .qy td{ padding-top:6px; line-height:35px; vertical-align:middle;}
+.message-list .qy td img{ width:35px; height:35px; margin:0px 6px 0px 2px; border:1px solid #b2b2b2; float:left;}
+.message-list .qy td span.a-green{ float:left;font-family:"Microsoft YaHei",Arial,SimSun,sans-serif;}
+.message-list .qy td div.me-name{ float:left; vertical-align:middle; line-height:35px;}
+.message-list .qy td div.me-name i.icon-down-c{ cursor:pointer; float:left; margin-left:5px; margin-top:15px;}
+.message-list .qyb td{ padding-bottom:6px; border-bottom:1px solid #e4e4e4;}
+.me-moname{ width:300px; padding:8px; margin-top: 30px;*margin-left:-155px;}
+.me-moname span .icon-round-del{ float:right;}
+.me-moname li{ float:left; white-space:nowrap; padding:2px 8px 2px 0px;}
