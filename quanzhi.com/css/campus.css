@@ -1,0 +1,144 @@
+@charset "utf-8";
+/* CSS Document */
+
+.campus .u-nav {background:url(../images/v1/campus-headerbg.jpg) no-repeat; height:150px;}
+.campus .u-nav .cont {background:none; height:35px;}
+.campus .l,.campus-hlist .l{ margin-top:10px;}
+.Enterprises {width:681px; margin-top:25px; border:1px solid #ddd; background-color:#EEF4E5; margin-left:8px;}
+.Enterprises h3 {height:35px; display:block; line-height:30px;}
+.Enterprises h3 i {display:block; width:40px; height:35px; float:left; background:url(../images/v1/campus-jpg.jpg) no-repeat 0 -84px;}
+.Enterprises ul {display:block; clear:both; overflow:hidden; margin:0 0 0 5px;}
+.Enterprises ul li {float:left; width:225px; height:65px;}
+.Enterprises ul li a {display:block;}
+.Enterprises ul li img {width:218px; height:58px; display:block; border:1px solid #ddd;}
+.Position-list {display:block; clear:both; overflow:hidden; margin:20px 0; width:683px; margin-left:8px;} 
+.Position-list div {width:326px; }
+.Position-list div.fl {float:left;}
+.Position-list div.fr {float:right;}
+.Position-list div h3 {display:block; height:35px; line-height:35px;}
+.Position-list div h3 i {display:block; float:left; width:40px; height:35px; background:url(../images/v1/campus-jpg.jpg) no-repeat -48px -80px;}
+.Position-list div ul {display:block;}
+.Position-list div ul li {display:block; line-height:25px; height:25px; overflow:hidden;}
+.Position-list div ul li span {float:right; color:#a5a5a5;}
+.Position-list div ul li i.jt {display:block; float:left; width:7px; height:7px; font-size:0; background:url("../images/v1/icon.png?20121226_1") no-repeat -181px -180px; margin:10px 5px 0 0;}
+.Position-list div ul li.nobg { margin-top:8px; padding-left:14px;}
+.Position-list div.fr ul.a-green li a {height:19px; overflow:hidden;}
+h2.Campus-Project {background:url(../images/v1/campus-jpg.jpg) no-repeat; display:block; width:279px; height:82px; margin-bottom:18px; margin-top:15px;}
+h2.Campus-Project a {display:block; text-indent:-99999em; cursor:pointer; width:279px; height:82px; overflow:hidden;}
+
+.campus-hlist .u-nav {background:url(../images/v1/campus-lheaderbg.jpg) no-repeat; height:76px;}
+.campus-hlist .u-nav .cont {background:none; height:35px;}
+
+.camus-alist {display:block; clear:both; overflow:hidden; width:685px; margin:24px 0 20px 8px;}
+.camus-alist .tab-navs ul.utab {width:685px; height:37px; line-height:43px; background:url(../images/v1/campus-jpg.jpg) no-repeat 0 -123px;}
+.camus-alist .tab-navs ul li {display:block; width:126px; height:37px; margin-right:5px; float:left; font-family:"Microsoft YaHei",Arial,SimSun,sans-serif;font-size:14px;font-weight:bold;text-align:center;background:url(../images/v1/campus-jpg.jpg) no-repeat -135px -123px; color:#269925;}
+.camus-alist .tab-navs ul li a {color:#269925;}
+.camus-alist .tab-navs ul li a:hover {text-decoration:none;}
+.camus-alist .tab-navs ul li.on {background:url(../images/v1/campus-jpg.jpg) no-repeat -5px -123px; width:126px; height:37px; color:#000;}
+.camus-alist .tab-navs ul li.on a {color:#000;}
+*html .camus-alist .tab-navs ul.utab li.ml-5 {margin-left:5px; margin-right:4px; display:inline;}
+*+html .camus-alist .tab-navs ul.utab li.ml-5 {margin-left:5px; margin-right:4px; display:inline;}
+.camus-alist .tab-navs ul.utab li.ml-5 {margin-left:5px; margin-right:4px;}
+.camus-alist .tab-navs ul li a {display:block; cursor:pointer;}
+.camus-alist .tab-navs ul li a:hover {text-decoration:none; cursor:pointer;}
+.camus-alist .tab-navs .tab-content { display:block; clear:both; overflow:hidden; margin:0; padding:0 6px;}
+.camus-alist .tab-navs .tab-content h2 {height:34px; display:block; margin:10px 0; line-height:34px; font-family:"Microsoft YaHei",Arial,SimSun,sans-serif;font-size:18px; float:left; text-align:left; color:#000; width:100%; padding-left:18px;}
+.camus-alist .tab-navs .tab-content ol {display:block; clear:both; overflow:hidden;}
+.camus-alist .tab-navs .tab-content ol li {display:block; line-height:18px; padding:4px 0; clear:both; overflow:hidden;}
+.camus-alist .tab-navs .tab-content ol li span.date {display:inline-block; width:85px; height:18px; line-height:18px; float:right; text-align:center; color:#000;}
+.camus-alist .tab-navs .tab-content ol li div.fl {display:block; float:left; width:545px;}
+.camus-alist .tab-navs .tab-content ol li div.fl i.jt {display:block; float:left; width:7px; height:7px; font-size:0; background:url("../images/v1/campus-jpg.jpg") no-repeat -339px -68px; margin:6px 9px 0 2px;}
+.camus-alist .tab-navs .tab-content ol li div.fl span.area {float:right; display:inline-block; height:18px; line-height:18px; color:#000; width:90px; overflow:hidden;text-overflow: ellipsis;white-space: nowrap; text-align:right;}
+.camus-alist .tab-navs .tab-content ol li div.fl span.ctex {display:block; float:left; width:390px; line-height:18px; overflow:hidden;text-overflow: ellipsis;white-space: nowrap;}
+
+.campus-hlist h2.Campus-Project {margin-top:14px; margin-bottom:0;}
+.Enterprises2 {width:277px; margin:16px 0; border:1px solid #ddd; background-color:#EEF4E5;}
+.Enterprises2 h3 {height:35px; display:block; line-height:30px;}
+.Enterprises2 h3 i {display:block; width:40px; height:35px; float:left; background:url(../images/v1/campus-jpg.jpg) no-repeat 0 -84px;}
+.Enterprises2 ul {display:block; clear:both; overflow:hidden; margin:0 0 0 6px;}
+.Enterprises2 ul li {float:left; width:265px; height:65px;}
+.Enterprises2 ul li a {display:block;}
+.Enterprises2 ul li img {width:263px; height:58px; display:block; border:1px solid #ddd;}
+
+.topnav {background:url("../images/v1/campus-article-navbg.jpg") repeat-x; box-shadow:9px 3px 8px #DEECDC; width:1000px; height:33px; margin:0 auto;}
+.topnav .logo {float:left; display:block; width:100px; height:25px; margin:2px 0 0 20px; background:url(../images/v1/campus-jpg.jpg) no-repeat -98px -88px;}
+.topnav .logo a {text-indent:-9999em; display:block; height:25px;}
+.topnav .nav {float:right; height:19px; line-height:18px; margin-top:6px; margin-right:15px;_margin-top:8px;}
+.topnav .nav ul {float:left; display:inline-block;}
+.topnav .nav ul.mr-10 {margin-right:10px; }
+.topnav .nav li {float:left; line-height:18px; display:inline-block; padding:0 8px; background:url(../images/v1/campus-topnavli-bg.gif) no-repeat right 4px;}
+*html .topnav .nav li {background-position:right 2px;}
+.topnav .nav li.mt3 {margin-top:3px;}
+.topnav .nav li em {color:#69EE68;}
+.topnav .nav li i.nl{width:12px; margin-top:0px; height:18px; display:inline-block; vertical-align:middle; background:url("../images/v1/icon.png?20121226_1") no-repeat scroll 0 0;}
+.topnav .nav li.noborder {background:0 none;}
+.topnav .nav li a{color:#fff; text-decoration:none; display:inline-block; line-height:18px; text-align:center;}
+.topnav .nav li a:hover {color:#fff; text-decoration:underline;}
+
+.wrap-content {width:1000px; margin:0 auto; display:block; clear:both; overflow:hidden; background:url(../images/v1/campus-article-mainbg.jpg) no-repeat left top;}
+.campus-article .content {width:980px; margin:0; float:left;}
+*html .campus-article .article-body {display:inline;}
+.campus-article .article-body {display:block; width:640px; float:left; margin-left:30px; clear:both; overflow:hidden;}
+.campus-article .article-body .top {display:block; margin-top:2px; border-bottom:1px dotted #666; padding-bottom:10px; clear:both; overflow:hidden;}
+.campus-article .article-body .top h2 {height:45px; display:block; line-height:26px; font-family:"Microsoft YaHei",Arial,SimSun,sans-serif;font-size:20px; float:left; text-align:left; color:#000; width:100%;}
+.campus-article .article-body .top .abstract {height:20px; line-height:20px; margin:14px 0 5px; display:block; color:#cfcfcf;}
+.campus-article .article-body .top .abstract span {display:inline-block; line-height:20px; color:#000;}
+.campus-article .article-body .body {display:block; clear:both; overflow:hidden; margin:10px 0;}
+.campus-article .article-body .body p {display:block; font-size:14px; line-height:180%; color:#666;}
+.campus-article .article-body .body img {max-width:630px; width:expression(this.width > 630 ? "630px" : this.width); overflow:hidden;}
+.campus-article .article-tj { display:block; width:276px; border:1px solid #ddd; background-color:#EEF4E5; margin-bottom:40px;}
+.campus-article .article-tj h3 {display:block; height:38px; line-height:35px; background:url(../images/v1/campus-jpg.jpg) no-repeat right 0; font-family:"Microsoft YaHei",Arial,SimSun,sans-serif; font-size:18px; color:#000; padding-left:40px;}
+.campus-article .article-tj ul {display:block; clear:both; overflow:hidden; padding:6px 6px 12px 6px;}
+.campus-article .article-tj ul li {display:block; line-height:18px; padding:4px 0; clear:both; overflow:hidden;}
+.campus-article .article-tj ul li span {display:block; float:left; width:240px;}
+.campus-article .article-tj ul li i.jt {display:block; float:left; width:7px; height:7px; font-size:0; background:url("../images/v1/icon.png?20121226_1") no-repeat -181px -180px; margin:6px 5px 0 0;}
+.campus-article .article-tj ul li.nobg { margin-top:8px; padding-left:12px;}
+
+.campus .search p p,.campus-hlist .search p p { height:33px; padding:0;}
+.campus .js-base-selecty ul,.campus-hlist .js-base-selecty ul {top:33px;}
+/*.campus .search p.dq .js-base-selecty i.icon-down-c,.campus .search p.qz .js-base-selecty i.icon-down-c,.campus-hlist .search p.dq .js-base-selecty i.icon-down-c,.campus-hlist .search p.qz .js-base-selecty i.icon-down-c { background:url(../images/v1/diqunew-bg.jpg) no-repeat -142px -45px; display: inline-block; font-size:0; overflow:hidden; padding:0 !important; vertical-align:middle;}*/
+.campus div.r .login div.text-h2 i.icon {background:url(../images/v1/diqunew-bg.jpg) no-repeat -236px -33px;}
+.campus .snsLogin span {display:inline-block;}
+.campus .icon-sns-qq {background:url(../images/v1/diqunew-bg.jpg) no-repeat -122px -62px; width:16px;}
+.campus .icon-sns-renren {background:url(../images/v1/diqunew-bg.jpg) no-repeat -144px -62px; width:16px; height:16px;}
+.campus .icon-sns-sinat {background:url(../images/v1/diqunew-bg.jpg) no-repeat -166px -62px; width:20px; height:16px;}
+.content .Position-list div ul li i.jt,.campus-service p i.jt {background:url(../images/v1/campus-jpg.jpg) no-repeat -339px -68px;}
+.campus .snsLogin {*height:53px;}
+
+.campus-service {width:760px; margin:0 auto; display:block; clear:both; overflow:hidden;}
+.campus-service h2{font-family:"微软雅黑"; font-size:16px; font-weight:700; line-height:28px; color:#000; padding:35px 0 10px 0;}
+.campus-service p {line-height:18px; display:block; padding-bottom:3px; color:#000;}
+.campus-service p i.jt{display:block; float:left; width:7px; height:7px; font-size:0; margin:6px 5px 0 0;}
+.campus-service .clearbox p {color:gray;}
+.campus-service .clearbox {margin-bottom:15px;}
+.campusb-form {display:block; width:750px; color:#000;}
+.campusb-form dl dt {float:left; padding:4px 0 6px 15px; width:120px; margin-bottom:5px;}
+.campusb-form dl dd {margin-bottom:6px; float:left; width:600px;}
+.campusb-form dl dt i.xing {background:url(../images/v1/xing.gif) no-repeat; width:9px; height:10px; display:inline-block; float:left; overflow:hidden; vertical-align:middle; margin:4px 2px 0 0;}
+.campusb-form dl dd span.ipt input {width:250px;}
+.campusb-form dl dd label input {vertical-align:middle; margin:-2px 2px 0 2px;}
+.campusb-form dl dd span.ipt,.campusb-form dl dd label,.campusb-form dl dd span.red {display:inline-block; float:left;}
+.campusb-form dl dd label,.campusb-form dl dd span.red {padding-left:10px; line-height:28px;}
+.campusb-form dl dd textarea.edit-mb {border:1px solid #8F9F70; color:#000; height:150px; padding:5px; resize:none; width:500px;}
+.camus-alist div.page a {color:#018201;}
+
+.campus-article .topnav .nav li.zcie6s span.iextex {display:inline-block; padding:0px 2px 0px 18px; vertical-align:baseline;_vertical-align: middle; background:url(/images/v1/template/temp-newlock.png) no-repeat; color:#333333;}
+*html .campus-article .topnav .nav li.zcie6s {vertical-align:middle;}
+*html .campus-article .topnav .nav li.zcie6s i.icon-lock {vertical-align:middle; top:-3px;}
+*html .campus-article .topnav .nav li.zcie6s a {vertical-align:middle; padding:0;}
+.nologin .login form p{ padding-left:24px;}
+.nologin .login label{ float:left; padding:5px 0px 0px 0px; width:40px;}
+.yzm .ipt input{ width:40px;}
+.nologin .login form p span{ float:left;}
+.yzm span{ margin-right:5px; display:inline; white-space:nowrap;}
+.yzm span.text-hot{ padding-left:48px;}
+.yzm span.text-hot{ padding-top:2px;}
+.yzm span img{ height:28px;}
+.yzm span.user_pt5{ padding-top:5px;}
+.nologin .login form p span{ float:left;}
+.nologin .login form p.pwsave{ padding-left:60px; overflow:hidden; height:18px; padding-bottom:0px; margin-bottom:8px;}
+.nologin .login form p.pwsave span{ float:left;}
+.nologin .login form p.pwsave span.text-cont{ padding-right:5px;}
+.nologin .login form p.btns{ padding:8px 0px 15px 24px; text-align:left;}
+.nologin .login form p.btns span{ float:none;}
+.search p.dq div,.search p.qz div{ padding-top:0px; height:33px;}

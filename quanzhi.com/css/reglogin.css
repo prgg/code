@@ -1,0 +1,161 @@
+/*header 头部*/
+.reg-header,
+.reg-content,
+.reg-footer {
+	width:1000px;
+	margin-left: auto;
+	margin-right:auto;
+	color: #000;
+    font-family: "Microsoft YaHei",Arial,SimSun,sans-serif;
+    font-size: 14px;
+}
+.reg-header{
+	height:68px;
+	background: url(/images/v1/header_bg.png) repeat-x;
+	margin-bottom: 38px;
+}
+	.reg-header-logo-warp{
+		margin: 8px 10px  0 8px;
+		float: left;
+	}
+	.reg-header-logo {
+		margin-right: 10px;
+	}
+	.reg-header-home{
+		background: url(/images/v1/home_btn.png) no-repeat;
+		display: block;
+		width:120px;
+		height:32px;
+		float:right;
+		margin:28px 20px 0 0; 
+	}
+	.reg-header-info{
+		vertical-align: super;
+	}
+/*内容主体*/
+.reg-content{
+	margin-bottom: 38px;
+	height:438px;
+}
+	.reg-content-img{
+		float:left;
+		width:628px;
+		height:359px;
+		background: url(/images/v1/side_img.png) no-repeat;	
+	}
+	.reg-content-login{
+		float:right;
+		border-left:1px solid #d1d1d1;
+		padding:25px 0px 48px 25px;
+		width:335px;
+		/*margin-top: 15px;*/
+	}
+	.reg-content-login-title{
+		font-size:18px;
+		border-bottom:1px solid #B2B2B2;
+		padding-bottom: 8px;
+		margin-bottom: 40px;
+		width:284px;
+	}
+	.reg-content-login-list li{
+		position:relative;
+		height:36px;
+	}
+	.reg-content-login-list li.agreementli{ height:40px;}
+	.reg-content-login-list li div.text-hot{
+		width:202px; height:32px; position:absolute; left:85px; top:-22px; font-size:12px; font-weight:normal; font-family:Arial, Helvetica, sans-serif; background:url(/images/v1/rg_error.gif) no-repeat; line-height:26px; padding-left:5px; display:none;
+	}
+	.reg-content-login-list li div.text-hot1{
+		width:302px; height:32px; position:absolute; left:85px; top:-22px; font-size:12px; font-weight:normal; font-family:Arial, Helvetica, sans-serif; background:url(/images/v1/rg_error1.gif) no-repeat; line-height:26px; padding-left:5px; display:none; color:#F00;
+	}
+	.reg-content-login-btn{
+		text-align: center;
+	}
+.login-user-email,
+.login-user-pass,
+.login-user-ok{
+	cursor: default;
+    float: left;
+    height: 26px;
+    line-height: 26px;
+    _margin-top:10px;/*ie 6 line-height 失效*/
+    width: 85px;
+   
+}
+.login-user-pact{
+	padding-left: 80px;
+}
+.login-pact-info,
+.inputText{
+	vertical-align: middle;
+}
+/*密码强度验证*/
+.pw-strength {
+   
+    height: 14px;
+    margin-top: 0px;
+    overflow: hidden;
+    position: relative;
+    width: 183px;
+}
+	.pw-letter {
+	    left: 0;
+	    position: absolute;
+	    top: 0;
+	}
+	.pw-bar{
+		height: 14px;
+	}
+	.pw-one .pw-bar{
+		background: #EB0027;
+		width:60px;
+	}
+	/*字体颜色*/
+	.pw-one span,
+	.pw-two span,
+	.pw-three span{
+		color: #fff !important;
+	}
+	.pw-two .pw-bar{
+		background: #FFC200;
+		width:120px;
+	}
+	.pw-three .pw-bar{
+		
+		width:182px;
+	}
+	.pw-strength span {
+	    border-right: 1px solid #FFFFFF;
+	    color: #000;
+	    float: left;
+	    font-size: 12px;
+	    height: 15px;
+	   	line-height: 15px;
+	    text-align: center;
+	    width: 60px;
+	}
+.reg-content-login-list .login-user-bar{
+	height:22px;
+	padding-left: 85px;
+	_padding-left:88px;
+	vertical-align: middle;
+}
+.ipt input.login-text{
+	
+    height: 26px;
+    line-height: 26px;
+    text-indent: 4px;
+    width: 202px;
+}
+.login-pact-info a{
+	color: #018201;
+}
+.labelFont {
+     /*ie 无衬线字体，除非变态删除掉这个字体*/
+     _font-family:Tahoma;/*关键*/
+     font-size:12px !important;
+}
+.user_vip{ width:800px; height:600px;}
+.user_vipcon{ width:780px; height:490px; line-height:1.8; overflow-y:auto;}
+.user_vip .btn-orange-b a{ font-size:12px;}
+#txtagreementTip{ display:none; font-family:Arial, Helvetica, sans-serif;}
