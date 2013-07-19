@@ -13,7 +13,7 @@
 <article>
 	<h1>Video getUserMedia</h1>
 	<section>
-		<video id="video"></video>		
+		<video id="video"></video>
 		<button onclick="var that = this;document.getElementById('video').init(function(){that.disabled = true});">Get Video</button>
 		<button onclick="document.getElementById('video').play();">Play Video</button>
 		<button onclick="document.getElementById('video').pause();">Pause Video</button>
@@ -21,12 +21,11 @@
 
 	<section>
 		<canvas id="canvas"></canvas>
-		<button onclick="getPhoto()">Get Photo</button>
+		<button onclick="getPhoto(document.getElementById('video'))">Get Photo</button>
 	</section>
 </article>
 
 <script>
-
 
 function video_extend(){
 
@@ -49,7 +48,8 @@ function video_extend(){
 	var that = this;
 
 	//初始化：获取视频来源
-	this.init = function(callback){		
+	this.init = function(callback){
+
 		navigator.getUserMedia(
 			{
 				video : true
@@ -58,7 +58,7 @@ function video_extend(){
 				if(that.mozSrcObject !== undefined)
 					that.mozSrcObject = stream;
 				else
-					that.src = (window.URL && window.URL.createObjectURL(stream) || stream);
+					that.src = (window.URL && window.URL.createObjectURL(stream) || stream);				
 				//默认暂停
 				that.pause();
 				if(callback && typeof callback === "function"){
@@ -88,6 +88,6 @@ function getPhoto() {
 
 video_extend.call(document.getElementById("video"));
 
- </script>
+</script>
 </body>
 </html>

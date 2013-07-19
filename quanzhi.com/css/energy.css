@@ -1,0 +1,68 @@
+/* CSS Document */
+.nynologin .u-nav,.nynologin .u-nav .cont,.nynologin .u-nav .cont .apl{ height:18px; overflow:hidden;}
+.energy .header .logo a{ margin-top:15px;}
+.energy .search .key{ width:210px;}
+.energy .search .trade{ width:100px;}
+.energy p.text{ margin-left:0px;}
+.energy .cont a#qpxt{ left:210px;}
+.energy .banner{ margin-bottom:0px;}
+.energy .banner img{ width:279px; height:100px;}
+.energy_hot{ position:absolute; left:110px; top:22px;*top:13px;}
+  .energy_hot span.a-green a{font-size:14px;font-family:"Microsoft YaHei",Arial,SimSun,sans-serif;}
+  .energy_hot span.line{ font-size:12px; color:#a5a5a5; padding:0px 15px;}
+/*搜索关键词二级下拉层*/
+.search div.energy_searchtwo{ position:absolute; width:227px; left:11px; top:42px; border:1px solid #8F9F70; height:140px; background-color:#FFFFFF;box-shadow:2px 2px 0px rgba(150,150,150,0.4); padding:8px;}
+  .search div.energy_searchtwolist{  width:226px; height:36px; padding:0px;}
+ .energy_searchtwolist span{ float:left;}
+ .energy_searchtwolist span.name{ width:60px; font-size:13px;font-family:"Microsoft YaHei",Arial,SimSun,sans-serif; line-height:26px; color:#000000;}
+/*名企招聘*/
+.energy_title{margin:15px 0px 0px 8px; height:35px;}
+.energy_title i{ display:block; width:30px; height:30px; float:left; margin-right:5px; display:block;}
+.energy_title i.brandcom{background:url(../images/v1/campus-jpg.jpg) no-repeat -580px -63px;}
+.energy_title i.recomcom{background:url(../images/v1/campus-jpg.jpg) no-repeat -640px -63px;}
+.energy_title span.zi{ font-size:18px; font-weight:bold; line-height:30px; float:left;font-family:"Microsoft YaHei",Arial,SimSun,sans-serif; color:#333;}
+.energy_title .fr{ padding-top:8px;}
+.energy_title .fr b{ color:#F00;}
+.energy_title .fr span{ padding-left:10px;}
+.Enterprises {width:681px; margin:0px 0px 25px 8px; border:1px solid #ddd; background-color:#EEF4E5;}
+   .Enterprises h3 {height:35px; display:block; line-height:30px;}
+   .Enterprises h3 i {display:block; width:40px; height:35px; float:left; background:url(../images/v1/campus-jpg.jpg) no-repeat 0 -84px;}
+   .Enterprises ul {display:block; clear:both; overflow:hidden; margin:6px 0 0 6px;}
+   .Enterprises ul li {float:left; width:225px; height:63px;}
+   .Enterprises ul li.sp{ width:668px; height:80px;}
+   .Enterprises ul li.sp img{ width:666px; height:73px;}
+   .Enterprises ul li a {display:block; background:none;}
+   .Enterprises ul li img {width:216px; height:56px; display:block; border:1px solid #ddd;}
+   
+.Position-list {display:block; clear:both; overflow:hidden; margin:0px 0px 20px 8px; width:980px;} 
+.energy .icon-post-hot{ margin-right:5px;}
+/*推荐企业*/
+.recommendcom {width:978px;border:1px solid #ddd; background-color:#EEF4E5; margin:0px 0px 25px 8px;clear:both; display:block;}
+   .recommendcom h3 {height:35px; display:block; line-height:30px;}
+   .recommendcom h3 i {display:block; width:40px; height:35px; float:left; background:url(../images/v1/campus-jpg.jpg) no-repeat -311px -2px;}
+   .recommendcom ul {display:block; clear:both; overflow:hidden; margin:6px 0 0 5px;}
+   .recommendcom ul li {float:left; width:227px; height:52px; margin:0px 8px 8px 0px; display:inline; border:1px solid #ddd; background-color:#FFFFFF; padding:3px;}
+   .recommendcom ul li img { float:left; width:125px; height:52px;}
+   .recommendcom ul li div.name{ float:left; width:94px; padding-left:6px; overflow:hidden;}
+   .recommendcom ul li div.name a{ white-space:nowrap; line-height:25px;}
+/*热门职位*/
+.recommendqy_title{ height:30px;}
+ span.recom_title{ line-height:30px;}
+.recommendqy{ margin:12px 0px 50px 0px; display:block; overflow:hidden;}
+span.recommendqy_more{ float:right; font-size:12px; font-weight:normal; padding:5px 0px 0px 0px;}
+.recommendqy li{ float:left; width:308px; padding:0px 5px 6px 12px;background:url(/images/v1/littleright.png) no-repeat 3px 6px; display:inline;}
+.recommendqy li p.qyname{ width:308px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;*white-space: normal;height:18px;}
+.recommendqy li p.jobname{width:306px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;*white-space: normal; height:18px; padding-left:2px;}
+.recommendqy li p.jobname a{ margin-right:8px;}
+/*登陆后右侧推荐职位*/
+.commendjob_title{ width:235px; height:32px;background:url(../images/v1/energy/commend_job.png) no-repeat; padding:5px 0px 0px 45px;font-family:"Microsoft YaHei",Arial,SimSun,sans-serif; font-size:16px; line-height:24px; font-weight:700; color:#000000;}
+.commendjob_cont{ height:177px;background:url(../images/v1/energy/commend_jobnr.png) repeat-y; padding:8px 10px; overflow:hidden;}
+.commendjob_cont li{background:url(../images/v1/littleright.png) no-repeat 0px 9px; width:248px; height:24px; line-height:24px; overflow:hidden; padding-left:10px; white-space:nowrap;text-overflow: ellipsis;}
+.commendjob_cont li span.name{ padding-left:8px;}
+.commendjob_bottom{ height:5px; font-size:0px; line-height:1px;background:url(../images/v1/energy/commend_jobdi.png) no-repeat;}
+
+/*底部版权*/
+.energy .footer .copyRight{ float:left; padding-left:30px;}
+.energy .footer .service{ float:right; padding-right:30px;}
+
+.snsLogin span span{ padding-right:0px;}

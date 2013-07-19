@@ -1,0 +1,178 @@
+﻿/* QuanZhi.cn/static/js/selectbar.js : Style */
+
+/* 重置相关浏览器默认标记样式 */
+.popDiv ol,
+.popDiv li,
+.popDiv p,
+.popDiv input { padding:0; margin:0; list-style:none; font-size:12px!important; font-family:Arial,SimSun!important; }
+	/* 公共弹窗样式 */
+	.popDiv { border: 1px solid #425818; text-align:left; font-size:12px; box-shadow:2px 2px 0 rgba(150,150,150,0.4); }
+	.popDiv .title { padding-left:10px; background:#eef4e6 url(/images/v1/poupbtbg.png?20121226_1) repeat-x; height:37px; line-height:37px; font-weight:normal; color:#333; }
+	.popDiv .closeBut { position:absolute; top:10px; right:10px; width:15px; height:15px; margin:0; padding:0; text-indent:-4em; overflow:hidden; background:url("/images/v1/selectbar.png?20121226_1") no-repeat -55px -103px; cursor:pointer; }
+	.popDiv .but { width:70px; height:27px; margin:0; border:0 none; line-height:26px; overflow:hidden; text-align:center; background:url(/images/v1/selectbar.png?20121226_1) no-repeat 0 -120px; cursor:pointer; }
+	.popDiv .but span { white-space:nowrap; }
+
+/* Alert基础样式 */
+.alertBar { width:300px; padding-bottom:12px; text-align:center; font-family:Arial,SimSun; font-size:12px; color:#000; }
+	.alertBar .title { text-align:left; }
+	.alertCont { padding:20px 45px 10px; margin:0; text-align:left; }
+	.alertBar .but,.alertBar span { outline:0 none; }	
+	/* Alert - 提示样式 */
+	.alertBarHelp .alertCont { margin:20px; padding:3px 0 3px 25px; background:url("/images/v1/selectBar.png?20121226_1") no-repeat -50px -190px; }
+
+/* 选择器基础样式 */
+.selectBar { position:relative; font-family:Arial,SimSun; font-size:12px; color:#333; zoom:1; }
+	.selectBar div { background-color:#fff; }
+	.selectBar input,
+	.selectBar label { outline:medium none; }
+	.selectBar .selectContDiv,
+	.selectBar .selectOld { border-top:1px solid #ddd; }
+	.selectBar .selectNew,
+	.selectBar .selectOld { padding:5px 10px; }
+	.selectBar .selectNew .selectNewBut { position:absolute; right:4px; top:-37px; }
+	.selectBar .selectNew .selectNewBut button { margin-left:4px; }
+	.selectBar .selectOld { padding-bottom:5px; display:none; }
+	.selectBar .selectNew p,
+	.selectBar .selectOld p,
+	.selectBar .selectNew ol,
+	.selectBar .selectOld ol { float:left; padding-top:5px; }
+	.selectBar .selectNew li,
+	.selectBar .selectOld li { float:left; display:inline; line-height:18px; height:18px; overflow:hidden; color:#333; }
+	.selectBar .selectNew li span,
+	.selectBar .selectOld li label { margin-right:10px; white-space:nowrap; cursor:pointer; }
+	.selectBar .selectNew li span { float:left; display:inline; padding-right:15px; *padding-top:2px; background:url("/images/v1/selectbar.png?20121226_1") no-repeat right 3px; *background-position:right 5px; }
+	.selectBar .selectOld li span { white-space:nowrap; }
+	.selectBar .selectOld li input { vertical-align:middle; }
+	.selectBar .selectOld li label { padding:0 3px; }
+	.selectBar .selectBar_ol li.selected { background-color:#DFF0DD; /* 52bf48 97D192*/ }
+	/* 清除浮动 & 兼容处理 */
+	.selectBar,
+	.selectBar div,
+	.selectBar .selectNew ol,
+	.selectBar .selectOld ol,
+	.selectBar_ol,
+	.selectBar_ol ol { position:relative; zoom:1; _height:1%; _top:0px; }
+	.selectBar .selectNew *,
+	.selectBar .selectOld * { position:relative; }
+	.selectBar .selectNew ol,
+	.selectBar .selectOld ol { *padding-top:2px; }
+	.selectBar .selectNew li,
+	.selectBar .selectOld li { _float:none; _white-space:nowrap; *overflow:visible; }
+	.selectBar .selectNew:after,
+	.selectBar .selectOld:after,
+	.selectBar_ol:after,
+	.selectBar_ol ol:after,
+	.selectBar_ol li:after { content:"."; clear:both; display:block; height:0; overflow:hidden; }
+	.selectBar li label { _position:relative; _top:2px; }
+	.selectBar .list { width:auto; margin-top:auto; float:none; }
+
+	/* 选择器 - V1 */
+	.v1 { width:590px; }
+	.v1 .selectBar_ol { padding-bottom:5px; }
+	.v1 .selectBar_ol,
+	.v1 .selectBar_ol ol { padding:5px; background:#fff; }
+	.v1 .selectBar_ol li { padding-right:10px; position:relative; float:left; display:inline; }
+	.v1 .selectBar_ol li.hover { z-index:1; background-color:#DFF0DD; }
+	.v1 .selectBar_ol li div { border:3px solid #DFF0DD; }
+	.v1 .selectBar_ol li div ol { border:1px solid #435918; }
+	.v1 .selectBar_ol li span { display:block; width:125px; padding-left:5px; height:23px; overflow:hidden; white-space:nowrap; zoom:1; }
+	.v1 .selectBar_ol li span.disabled { background:url(/images/v1/selectbar.png?20121226_1) no-repeat 5px -222px; *background-position:9px -222px; }
+	.v1 .selectBar_ol li.list,
+	.v1 .selectBar_ol li.hover li.list,
+	.v1 .selectBar_ol li.hover li li.list { background-image:url(/images/v1/selectbar.png?20121226_1); background-repeat:no-repeat; background-position:right -15px; }
+	.v1 .selectBar_ol li li li.hover { padding-right:0; }
+	.v1 .selectBar_ol li span label { _width:100px; outline:none; display:block; padding:4px 0 0 4px; *padding:2px 0 0 0; cursor:pointer; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+	.v1 .selectBar_ol li span input { vertical-align:middle; float:left; position:relative; top:6px; *top:1px; }
+	.v1 .selectBar_ol li div,
+	.v1 .selectBar_ol li.hover li div,
+	.v1 .selectBar_ol li.hover li li div { display:none; position:absolute; top:0; width:292px; background:#fff; }
+	.v1 .selectBar_ol li.hover div,
+	.v1 .selectBar_ol li li.hover div { display:block; }
+	.v1 .selectBar_ol li li div { width:180px!important; }
+	.v1 .selectBar_ol li li li { width:100%; padding:0; }
+	.v1 .selectBar_ol li li li span { width:auto!important; }
+	.v1 .selectBar_ol li li li span label { _width:130px; }
+		.v1_1 { width:780px; }
+		.v1_1 .selectBar_ol li div,
+		.v1_1 .selectBar_ol li.hover li div,
+		.v1_1 .selectBar_ol li.hover li li div { width:auto; }
+		.v1_1 .selectBar_ol li span,
+		.v1_1 .selectBar_ol li.hover li span,
+		.v1_1 .selectBar_ol li.hover li li span { width:170px; position:relative; }
+		.v1_1 .selectBar_ol li span label { _width:140px; }
+		.v1_1 .selectBar_ol li li li span label { _width:150px; }
+		.v1_2 .selectBar_ol li { width:178px; }
+		.v1_2 .selectBar_ol li span,
+		.v1_2 .selectBar_ol li li span,
+		.v1_2 .selectBar_ol li span label,
+		.v1_2 .selectBar_ol li.hover div { width:auto!important; }
+		.v1_3 { width:490px; position:relative; _overflow-x:hidden; }
+		.v1_3 .selectBar_ol { position:relative; padding:5px 10px!important; background:#fff; }
+		.v1_3 .selected,
+		.v1_3 .selectBar_ol li.hover,
+		.v1_3 .selectBar_ol li span,
+		.v1_3 .selectBar_ol li div ol { background:none!important; }
+		.v1_3 .selectBar_ol li { position: relative; float:left; width:230px; }
+		.v1_3 .selectBar_ol li.list { background-image:none!important; }
+		.v1_3 .selectBar_ol li div { position:static!important; display:block!important; width:auto!important; height:auto!important; border:0!important; background:#fff!important; }
+		.v1_3 .selectBar_ol li div ol { padding:0 10px 0 0!important; border:none; }
+		.v1_3 .selectBar_ol li ol ol { padding-left:16px!important; }
+		.v1_3 .selectBar_ol li span { display:block!important; width:auto!important; }
+		.v1_3 .selectBar_ol li span label { _width:auto; display:block; cursor:pointer; }
+		.v1_3 .selectBar_ol li li { width: 100%; }
+		.v1_3 .selectBar_ol li li li span label { _width:auto; }
+		.v1_3 .selectBar_ol li.clearLeft { clear: left; }
+		.v1_3 .selectBar_ol li.rlist { position:absolute; left:240px; }
+		/* 行业IT站特别处理 */
+		.v1_3 .selectBar_ol li.it_a { top:1px; }
+		.v1_3 .selectBar_ol li.it_b { top:138px; }
+		/* 行业建筑站特别处理 */
+		.v1_3 .selectBar_ol li.jianzhu_a { top:0; }
+		.v1_3 .selectBar_ol li.jianzhu_b { top:230px; }
+		/* 行业医疗站特别处理 */
+		.v1_3 .selectBar_ol li.yiliao_a { width:200px!important; }
+		.v1_3 .selectBar_ol li.yiliao_b { width:200px!important; position:absolute; top:0; left:214px; }
+		
+		.v1_3 .selectBar_ol .list_a,
+		.v1_3 .selectBar_ol .list_a li { width:100%; }
+		.v1_3 .selectBar_ol .list_a li div { width:100%!important; }
+		.v1_3 .selectBar_ol .list_a li li { float:left!important; display:inline; width:188px; margin-right:10px; }
+		.v1_3 .selectBar_ol .list_b { width:100%; }
+		.v1_3 .selectBar_ol .list_b li { float:left; width:215px; }
+
+
+	/* 选择器 - V2 */
+	.v2 { width:830px; }
+	.v2 .selectBar_ol { padding:5px 0; position:relative; background:#fff; zoom:1; }
+	.v2 .selectBar_ol li { position:relative; z-index:1; line-height:18px; _line-height:15px; overflow:hidden; margin:0 5px; zoom:1; font-size:0; }
+	.v2 .selectBar_ol li * { font-size:12px; }
+	.v2 .selectBar_ol li li { margin:0; }
+	.v2 .selectBar_ol li.hover { overflow:visible; z-index:2; }
+	.v2 .selectBar_ol li.hangyeListBg,
+	.v2 .selectBar_ol li.hangyeListBg div { background-color:#F0F0F0; }
+	.v2 .selectBar_ol li strong { float:left; display:inline; width:212px; padding:3px 0 0 8px; _padding-top:5px; }
+	.v2 .selectBar_ol li strong span { float:left; width:100%; overflow:hidden; text-overflow: ellipsis; }
+	.v2 .selectBar_ol li.listMax strong { width:192px; padding-right:20px; background:url("/images/v1/selectbar.png?20121226_1") no-repeat 182px -175px; }
+	.v2 .selectBar_ol li.listMaxHover { margin:0; }
+	.v2 .selectBar_ol li.listMaxHover strong { position:relative; left:5px; top:0; z-index:2; background-position:206px -154px; }
+	.v2 .selectBar_ol li div { float:right; width:600px; background:#fff; }
+	.v2 .selectBar_ol li.listMaxHover div { position:absolute; left:0; top:-1px; z-index:1; padding-left:225px; padding-right:5px; border:solid #425818; border-width:1px 0; background:#eef4e6; }
+	.v2 .selectBar_ol li ol { padding:2px; background:transparent; }
+	.v2 .selectBar_ol li li { float:left; width:198px; zoom:1; }
+	.v2 .selectBar_ol li li ol { padding:1px; border:1px solid #333; }
+	.v2 .selectBar_ol li li span { position:relative; z-index:1; float:left; width:100%; height:18px; white-space:nowrap; overflow:hidden; }	
+	.v2 .selectBar_ol li li label { width:100%; display:block; text-indent:24px; cursor:pointer; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+	.v2 .selectBar_ol li li input { position:absolute; top:3px; left:8px; *margin:-4px; cursor:pointer; }
+	.v2 .selectBar_ol li li.list { background-image:url("/images/v1/selectbar.png?20121226_1"); background-repeat:no-repeat; background-position:8px -45px; }
+	.v2 .selectBar_ol li li.list input { left:-99em; }
+	.v2 .selectBar_ol li li.list li input { left:6px; }
+	.v2 .selectBar_ol li li.hover { background-position:8px -85px; background-color:#DFF0DD; }
+	.v2 .selectBar_ol li li div { display:none; clear:both; }
+	.v2 .selectBar_ol li li.hover div { display:block; position:absolute; left:0; top:18px; width:398px; float:none; width:auto; padding:0; border:2px solid #DFF0DD; background:#fff; }
+	.v2 .selectBar_ol li li li.v2_title { float:none; width:100%; font-weight:bolder; }
+	.v2 .selectBar_ol li li li.v2_title input { margin-left:6px; *margin-left:2px; _margin-top:-1px; position:static; vertical-align:middle; }
+	.v2 .selectBar_ol li li li.v2_title label { text-indent:0; margin-left:6px; display:inline; }
+	.v2 .selectBar_ol li li li.v2_title i { position:absolute; right:5px; top:1px; z-index:2; width:15px; height:15px; background:url("/images/v1/selectbar.png?20121226_1") no-repeat -55px -103px; cursor:pointer; }
+	/* IE hack */
+	.v2 .selectBar_ol li li li.v2_title span { float:none; display:block; width:100%; }
+	.v2 .selectBar_ol li li ol { width:396px; }
