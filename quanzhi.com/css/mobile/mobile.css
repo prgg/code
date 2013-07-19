@@ -1,0 +1,494 @@
+/*S 公司介绍*/
+.tab {
+	display: none;
+}
+.active {
+	display: block;
+}
+.content-company {
+	padding: 0 !important;
+}
+.content-company-title {
+	border-bottom: 2px solid #417800;
+	/*height:30px;*/
+	line-height: 30px;
+	padding-bottom: 10px;
+	font-size:16px;
+	color: #000;
+	font-weight: bold;
+	margin: 15px;
+}
+.content-company-summary,
+.content-company-cancat {
+	height: 30px;
+	line-height: 30px;
+	background: #C5C5C5;
+	margin-bottom: 10px;
+	text-indent: 15px;
+	font-weight: bold;
+}
+.content-company-list {
+	margin-bottom: 10px;
+	text-indent: 14px;
+}
+/*行高*/
+.content-paragr {
+	line-height: 1.8;
+	font-size:16px;
+	margin-bottom: 10px;
+	color: #262626;
+  	text-shadow:0 1px 0 #FFF;
+  	padding:0 15px;
+}
+.navbar {
+	box-shadow: 1px 2px 4px #ccc;
+	border-top:1px solid #bbb;
+	border-bottom:1px solid #bbb;
+	margin-bottom: 5px;
+}
+.navbar-list li {
+	width:50%;
+	height: 35px;
+	text-align: center;
+	line-height: 35px;
+	float:left;
+	margin-right: -.5px;
+}
+/*navbar 切换class*/
+.navbar-list .navbar-list-active {
+	background: #e3e3e3; /* Old browsers */
+	background: -moz-linear-gradient(top,  #e3e3e3 0%, #ffffff 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e3e3e3), color-stop(100%,#ffffff)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #e3e3e3 0%,#ffffff 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #e3e3e3 0%,#ffffff 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #e3e3e3 0%,#ffffff 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #e3e3e3 0%,#ffffff 100%); /* W3C */
+}
+.navbar-list .navbar-list-active a {
+	color: #6f6f6f;
+}
+.navbar-list li a {
+	font-size:18px;
+	color:#A7A7A7;
+	display: block;
+}
+/*E 公司介绍*/
+/*S 职位申请-1*/
+.js-pull-down {
+  display:none;
+}
+.on .js-pull-down{
+  display:block;
+}
+.on .icon-arrow{
+	background-position: -17px -240px;
+}
+.local-file input {
+	display: block;
+	margin: 0 auto 10px;
+}
+/*创建简历和个人申请同用样式*/
+.content-resume-create {
+	margin-top: 10px;
+	margin-bottom: 20px;
+}
+.content-resume-create li {
+	height:45px;
+	line-height: 45px;
+	border:1px solid #bbb;
+	border-radius: 4px;
+	box-shadow: 0 2px 4px #ccc;
+	margin-bottom: 10px;
+  position: relative;
+}
+.content-resume-create li a{
+	font-size: 18px;
+	display: block;
+  	text-overflow: ellipsis;
+ 	overflow: hidden;
+  	white-space: nowrap;
+  	padding-right: 20px;
+}
+.content-resume-create li a span {
+	padding-left: 20px;
+}
+.content-apply-mode-title,
+.content-app-more-title {
+	font-size: 16px;
+	color: #000;
+}
+.content-apply-mode-tips {
+	color: #484848;
+	font-size: 16px;
+	margin-bottom: 10px;
+	display: block;
+}
+.content-apply-mode {
+	margin-bottom: 25px;
+}
+/*简历附件继承*/
+.content-apply-mode-list li,
+.content-resume-attach {
+	/*height: 45px;*/
+	line-height: 45px;
+	margin-bottom: 10px;
+  	position:relative;
+  	border:1px solid #bbb;
+	border-radius: 4px;
+	box-shadow: 0 2px 4px #ccc;
+  	position: relative;
+}
+.content-apply-mode-list li a {
+	display: block;
+	color: #6f6f6f;
+	font-size: 16px;
+  	text-overflow: ellipsis;
+  	overflow: hidden;
+  	white-space: nowrap;
+  	padding-right: 25px;
+}
+.copy-textarea textarea {
+	width: 85%;
+	height: 81px;
+	display: block;
+	margin: 0 auto 10px;
+	resize:none;
+	border: 1px solid #E5E5E5;
+	box-shadow: 1px 1px 1px #ccc inset;
+	font-size: 16px;
+	padding: 8px 0 0 8px;
+  	color: #c4c4c4;
+}
+
+/*职位申请-2*/
+.content-office-apply {
+	margin-bottom: 20px;
+}
+.content-resume-title,
+.content-person-title,
+.content-workexpr-title {
+	font-size: 16px;
+	margin-bottom: 10px;
+	font-weight: bold;
+	margin-top: 15px;
+}
+/*个人申请继承*/
+.content-resume-list,
+.content-person-list,
+.content-workexpr-list,
+.content-add-info,
+.content-add-btn {
+	border-radius: 5px;
+	border:1px solid #bbb;
+	box-shadow: 0px 2px 4px #ccc;
+	margin-bottom: 15px;
+}
+.content-resume-list li{
+	height: 45px;
+	line-height: 45px;
+	font-size: 16px;
+	border-bottom: 1px solid #bbb;
+	text-indent: 18px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+}
+.content-resume-default {
+	font-size:16px;
+	color: #6f6f6f;
+	text-indent: 18px;
+	margin-bottom: 15px;
+}
+.content-resume-list label,
+.content-resume-default label {
+	display: block;
+}
+.content-resume-list li input,
+.content-resume-default input {
+	height:18px;
+	width: 18px;
+	vertical-align: middle;
+	text-align: center;
+	margin-right: 5px;
+}
+
+/*职位申请成功*/
+.content-app-more-title {
+	margin-bottom: 10px;
+	margin-left: 10px;
+}
+.content-app-more-list li {
+	box-shadow: 0 2px 4px #ccc;
+	position: relative;
+	height: 80px;
+	text-indent: 12px;
+}
+.content-app-more-list li a {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+.content-app-success {
+	font-size: 22px;
+	color: #F68200;
+	text-align: center;
+	padding: 25px 0;
+}
+.content-app-success img {
+	vertical-align: middle;
+	margin-right: 5px;
+}
+.content-app-success span {
+	display: inline-block;
+}
+.content-app-more-list li span {
+	display: block;
+	font-size:14px;
+}
+.content-app-more-list .app-more-title {
+	color:#F68200;
+	font-size: 16px;
+	padding-top: 5px;
+}
+.content-app-more-list .icon-arrow {
+	top: 30px;
+}
+.content-app-more-list .app-more-content {
+	color:#2f2f2f;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+	padding-right: 20px;
+	font-size: 14px;
+}
+.content_success {
+	padding: 0 !important;
+}
+
+/*职位详情*/
+.office-wrap {
+	padding-bottom: 50px;
+}
+.office-content {
+	padding:0 !important;
+	margin-bottom: 20px;
+}
+.content-office-title {
+	font-size: 16px;
+	font-weight: bold;
+	margin-top: 10px;
+	margin-left: 15px;
+	color: #000;
+}
+.content-office-welfare {
+	margin-bottom: 10px;
+}
+.content-office-welfare li,
+.content-office-claim-list li {
+	line-height: 1.5;
+	margin-left: 15px;
+	font-size: 16px;
+}
+.content-office-claim-title {
+	color: #f68200;
+	background: #d9d9d9;
+	line-height: 28px;
+	font-size: 16px;
+	font-weight: bold;
+	margin-bottom: 10px;
+	padding-left: 15px;
+}
+.content-office-claim-list {
+	margin-bottom: 5px;
+}
+.content-job-list li {
+	line-height: 24px;
+	margin-left: 15px;
+	padding-right: 20px;
+	font-size: 16px;
+	margin-bottom: 2px;
+}
+.apply-office-btn {
+	background: #efefef;
+	padding: 6px 0;
+	position: fixed;
+	bottom: 0;
+	margin: 0 !important;
+	width:100%;
+}
+.apply-office-btn a {
+	width: 41.8% !important;
+}
+
+/*手机站登录*/
+.login-content-login {
+  margin-bottom: 20px;
+}
+.login-content-logo {
+	background: url(../image/login-logo.png) no-repeat;
+	width: 157px;
+	height:99px;
+	margin: 15px auto 20px;
+}
+.content-login-email input,
+.content-login-pass input {
+	width:100%;
+	height:40px;
+	/*line-height: 1; chrome line-height*/
+	text-indent: 5px;
+	font-size: 16px;
+	background: #f5f5f5;
+	border:1px solid #a8a8a8;
+	box-shadow: 1px 1px 1px #ccc inset;
+	display: block;
+	margin: 0 auto 15px;
+}
+.content-login-autologin {
+	margin-bottom: 10px;
+	vertical-align: middle;
+	padding-left: 20px;
+}
+.content-login-autologin input {
+	margin-left: 10px;
+	margin-right: 10px;
+}
+/*个人申请*/
+.content-person-list li,
+.content-workexpr-list li {
+	height: 45px;
+	line-height: 45px;
+	font-size: 14px;
+	border-bottom: 1px solid #bbb;
+	text-indent: 6px;
+	position: relative;
+}
+.content-person-list .item-text,
+.content-workexpr-list .item-text {
+	height: 30px;
+	width: 90%;
+	box-shadow: 1px 1px 1px #ccc inset;
+	border: 1px solid #a8a8a8;
+	text-indent: 5px;
+	line-height: 1;
+}
+.person-edu .item-text {
+	width: 102px;
+}
+.person-edu .item-select {
+	width: 102px;
+}
+.person-pay .item-text {
+	width: 71px;
+}
+.person-pay .person-pay-opts {
+	position: absolute;
+	top: 5px;
+}
+.person-pay-opts input,
+.person-workhours-student input {
+	/*vertical-align: middle;*/
+	margin-right: 4px;
+}
+.content-person-list .person-workhours,
+.content-workexpr-list .person-workhours,
+.content-workexpr-list .person-pay{
+	line-height: 32px !important;
+	height: auto !important;
+	padding: 4px 0;
+}
+.person-workhours-student {
+	text-align: center;
+	padding-left: 15px;
+  	display: block;
+}
+
+.person-workhours .item-text {
+	width: 62px;
+}
+.content-person-list .item-select,
+.content-workexpr-list .item-select {
+	padding: 5px 6px;
+	border: 1px solid #a8a8a8;
+	box-shadow: 1px 1px 1px #ccc inset;
+}
+
+.item-text-info {
+	float: left;
+	text-align: right;
+	width: 58px;
+	line-height: 1;
+	padding-top: 15px;
+}
+.content-workexpr-list .item-text-info {
+  width: 90px;
+}
+.item-text-data{
+	overflow: hidden;
+	/*padding-top: 8px;*/
+}
+.person-sex input {
+	margin-right: 5px;
+}
+.item-text-sex {
+	margin-left: 20px;
+}
+/*简历附件*/
+
+.content-resume-attach {
+  	margin-bottom: 18px;
+}
+.resume-attach-btn {
+	margin-bottom: 20px;
+}
+.content-resume-attach .copy-textarea textarea {
+  	height: 218px;
+}
+.content-workexpr-list .workexpr-desc .item-text-info {
+  	line-height: 2px;
+}
+.content-workexpr-list .workexpr-desc {
+    height: auto;
+	padding: 8px 0 8px;
+    line-height: 2px;
+}
+.item-textarea {
+	width: 90%;
+	height: 100px;
+    resize: none;
+    border: 1px solid #E5E5E5;
+	box-shadow: 1px 1px 1px #CCCCCC inset;
+	color: #C4C4C4;
+	display: block;
+	font-size: 16px;
+	padding: 8px 0 0 8px;
+}
+.content-add-list {
+  	margin-bottom: 20px;
+}
+.content-add-info dl{
+  	padding: 10px;
+}
+.content-add-info dl span {
+	padding-right:  15px;
+}
+.content-add-info .content-modify-btn {
+	background: #639918;
+	height: 36px;
+	width: 50%;
+	margin-right:-3.5px;
+	border-radius:0 0 4px 4px;
+	display: inline-block;
+	color: #fff;
+	text-align: center;
+	line-height: 36px;
+}
+.content-add-btn {
+	display: block;
+	height: 36px;
+	text-align: left;
+	line-height: 36px;
+}
+.apply-resume-btn a,
+.apply-resume-btn input[type="submit"] {
+	width: 41.8% !important;
+}
