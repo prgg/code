@@ -1,0 +1,120 @@
+
+<!doctype html>
+<html>
+<head>
+	<title>Video</title>
+	<meta charset="utf-8">
+	<style>
+	section { display:inline-block; width:320px; margin-right:5px; }
+	video,canvas { display:block; width:320px; height:240px; }
+	</style>
+</head>
+<body>
+
+<article>
+	<h1>Video getUserMedia</h1>
+	<section>
+		<video id="video"></video>		
+		<button onclick="document.getElementById('video').init();">Get Video</button>
+		<button onclick="document.getElementById('video').play();">Play Video</button>
+		<button onclick="document.getElementById('video').pause();">Pause Video</button>
+	</section>
+
+	<section>
+		<canvas id="canvas"></canvas>
+		<button onclick="getPhoto(document.getElementById("video"))">Get Photo</button>
+	</section>
+</article>
+
+<script>
+
+
+function video_extend(){
+	if(!this.tagName || this.tagName != "VIDEO"){
+		console.log("Error : Object.tagName != \"VIDEO\"");
+		return;
+	}
+	//函数方法兼容处理
+	navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia|| navigator.mozGetUserMedia|| navigator.msGetUserMedia;
+	window.URL = window.URL|| window.webkitURL|| window.mozURL|| window.msURL;
+	//检查浏览器是否支持getUserMedia方法
+	if(!navigator.getUserMedia){
+		console.log("Error : getUserMedia undefined");
+		return;
+	}
+	this.init = function(){		
+		navigator.getUserMedia(
+			{
+				video : true
+			},
+			function (stream) {
+				if(this.mozSrcObject !== undefined)
+					this.mozSrcObject = stream;
+				else
+					this.src = (window.URL && window.URL.createObjectURL(stream) || stream);
+				//默认暂停
+				this.pause();
+			},
+			function (error) {
+				console.log("ErrorCode : " + error.code);
+			}
+		);
+		//载入video Obj方法
+		console.log(this)//.call(videoObj);
+	}
+	this.help = function(){
+		console.log("Error : Run video.init()");
+	};
+	this.pause = this.help;
+	this.play = this.help;
+}
+
+function getPhoto(videoObj){
+	if(canvasObj != null && canvasObj.tagName == "CANVAS"){
+		var w = videoObj.videoWidth,
+			h = videoObj.videoHeight,
+			context1 = canvasObj.getContext('2d');
+		canvasObj.width = w;
+		canvasObj.height = h;
+		context1.fillStyle = "#ffffff";
+		context1.fillRect(0, 0, w, h);
+		context1.drawImage(videoObj, 0, 0, w, h);
+	}
+};
+
+video_extend.call(document.getElementById("video"));
+
+//var test_video = new showVideo('video','canvas');
+/*
+Object.prototype.get = function(){
+	if(this.tagName && this.tagName == "VIDEO"){
+		//兼容处理
+		navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia|| navigator.mozGetUserMedia|| navigator.msGetUserMedia;
+		window.URL = window.URL|| window.webkitURL|| window.mozURL|| window.msURL;
+		var that = this;
+		if(!navigator.getUserMedia){
+			console.log("Error : navigator.getUserMedia undefined");
+			return;
+		}
+		navigator.getUserMedia(
+			{
+				video : true
+			},
+			function (stream) {
+				if(that.mozSrcObject !== undefined)
+					that.mozSrcObject = stream;
+				else
+					that.src = (window.URL && window.URL.createObjectURL(stream) || stream);
+				//默认暂停
+				that.pause();
+			},
+			function (error) {
+				console.log(error.code);
+			}
+		);
+	}
+};*/
+
+ </script>
+</body>
+</html>
