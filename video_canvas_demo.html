@@ -22,7 +22,7 @@
 
 	<section>
 		<canvas id="canvas"></canvas>
-		<button onclick="getPhoto(document.getElementById('video'))">Get Photo</button>
+		<button onclick="getPhoto()">Get Photo</button>
 	</section>
 </article>
 
@@ -47,18 +47,20 @@ function video_extend(){
 		return;
 	}
 
+	var that = this;
+
 	this.init = function(){		
 		navigator.getUserMedia(
 			{
 				video : true
 			},
 			function (stream) {
-				if(this.mozSrcObject !== undefined)
-					this.mozSrcObject = stream;
+				if(that.mozSrcObject !== undefined)
+					that.mozSrcObject = stream;
 				else
-					this.src = (window.URL && window.URL.createObjectURL(stream) || stream);
+					that.src = (window.URL && window.URL.createObjectURL(stream) || stream);
 				//默认暂停
-				this.pause();
+				that.pause();
 			},
 			function (error) {
 				console.log("ErrorCode : " + error.code);
@@ -67,21 +69,19 @@ function video_extend(){
 	}
 }
 
-function getPhoto(videoObj){
+function getPhoto() {
+	var videoObj = document.getElementById('video'),
+		w = 320,//videoObj.videoWidth,
+		h = 240,//videoObj.videoHeight,
+		canvasObj = document.getElementById('canvas'),
+		context1 = canvasObj.getContext('2d');
+	canvasObj.width = w;
+	canvasObj.height = h;
+	context1.fillStyle = "#ffffff";
+	context1.fillRect(0, 0, w, h);
+	context1.drawImage(videoObj, 0, 0, w, h);
+}
 
-/*	var canvasObj = document.getElementById('canvas');
-
-	if(canvasObj != null && canvasObj.tagName == "CANVAS"){
-		var w = 320,//videoObj.videoWidth
-			h = 240,//videoObj.videoHeight
-			context1 = canvasObj.getContext('2d');
-		canvasObj.width = w;
-		canvasObj.height = h;
-		context1.fillStyle = "#ffffff";
-		context1.fillRect(0, 0, w, h);
-		context1.drawImage(videoObj, 0, 0, w, h);
-	}*/
-};
 
 video_extend.call(document.getElementById("video"));
 
