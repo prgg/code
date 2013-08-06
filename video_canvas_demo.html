@@ -69,6 +69,7 @@ function video_extend(){
 	}
 }
 
+
 function getPhoto() {
 	var videoObj = document.getElementById('video'),
 		w = 320,//videoObj.videoWidth,
@@ -81,7 +82,6 @@ function getPhoto() {
 	context1.fillRect(0, 0, w, h);
 	context1.drawImage(videoObj, 0, 0, w, h);
 }
-
 
 video_extend.call(document.getElementById("video"));
 
