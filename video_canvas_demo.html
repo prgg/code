@@ -50,11 +50,13 @@ function video_extend(){
 
 	//初始化：获取视频来源
 	this.init = function(callback){
+
 		navigator.getUserMedia(
 			{
 				video : true
 			},
 			function (stream) {
+
 				if(that.mozSrcObject !== undefined)
 					that.mozSrcObject = stream;
 				else
