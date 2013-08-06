@@ -59,11 +59,25 @@ function video_extend(){
 				console.log("ErrorCode : " + error.code);
 			}
 		);
+<<<<<<< HEAD
 	}
 }
 
 function getPhoto(videoObj){
 	var canvasObj = document.getElementById('canvas');
+=======
+		//载入video Obj方法
+		console.log(this)//.call(videoObj);
+	}
+	this.help = function(){
+		console.log("Error : Run video.init()");
+	};
+	this.pause = this.help;
+	this.play = this.help;
+}
+
+function getPhoto(videoObj){
+>>>>>>> 71969da6e914c8fa38ccfd3f0377466ad35713c0
 	if(canvasObj != null && canvasObj.tagName == "CANVAS"){
 		var w = videoObj.videoWidth,
 			h = videoObj.videoHeight,
@@ -78,6 +92,40 @@ function getPhoto(videoObj){
 
 video_extend.call(document.getElementById("video"));
 
+<<<<<<< HEAD
+=======
+//var test_video = new showVideo('video','canvas');
+/*
+Object.prototype.get = function(){
+	if(this.tagName && this.tagName == "VIDEO"){
+		//兼容处理
+		navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia|| navigator.mozGetUserMedia|| navigator.msGetUserMedia;
+		window.URL = window.URL|| window.webkitURL|| window.mozURL|| window.msURL;
+		var that = this;
+		if(!navigator.getUserMedia){
+			console.log("Error : navigator.getUserMedia undefined");
+			return;
+		}
+		navigator.getUserMedia(
+			{
+				video : true
+			},
+			function (stream) {
+				if(that.mozSrcObject !== undefined)
+					that.mozSrcObject = stream;
+				else
+					that.src = (window.URL && window.URL.createObjectURL(stream) || stream);
+				//默认暂停
+				that.pause();
+			},
+			function (error) {
+				console.log(error.code);
+			}
+		);
+	}
+};*/
+
+>>>>>>> 71969da6e914c8fa38ccfd3f0377466ad35713c0
  </script>
 </body>
 </html>
