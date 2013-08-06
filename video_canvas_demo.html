@@ -15,7 +15,7 @@
 	<h1>Video getUserMedia</h1>
 	<section>
 		<video id="video"></video>		
-		<button onclick="document.getElementById('video').init();">Get Video</button>
+		<button onclick="var that = this;document.getElementById('video').init(function(){that.disabled = true});">Get Video</button>
 		<button onclick="document.getElementById('video').play();">Play Video</button>
 		<button onclick="document.getElementById('video').pause();">Pause Video</button>
 	</section>
@@ -49,7 +49,8 @@ function video_extend(){
 
 	var that = this;
 
-	this.init = function(){		
+	//初始化：获取视频来源
+	this.init = function(callback){		
 		navigator.getUserMedia(
 			{
 				video : true
@@ -61,6 +62,9 @@ function video_extend(){
 					that.src = (window.URL && window.URL.createObjectURL(stream) || stream);
 				//默认暂停
 				that.pause();
+				if(callback && typeof callback === "function"){
+					callback();
+				}
 			},
 			function (error) {
 				console.log("ErrorCode : getUserMedia - " + error.code);
@@ -69,7 +73,7 @@ function video_extend(){
 	}
 }
 
-
+//截图
 function getPhoto() {
 	var videoObj = document.getElementById('video'),
 		w = 320,
