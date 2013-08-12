@@ -55,14 +55,12 @@ function video_extend(){
 				video : true
 			},
 			function (stream) {
-
 				if(that.mozSrcObject !== undefined)
 					that.mozSrcObject = stream;
 				else
-					that.src = (window.URL && window.URL.createObjectURL(stream) || stream);
+					that.src = (window.URL && window.URL.createObjectURL(stream) || stream);				
 				//默认暂停
 				that.pause();
-
 				if(callback && typeof callback === "function"){
 					callback();
 				}
