@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+<head>
+	<title>Demo : Video + canvas</title>
+	<meta charset="utf-8">
+	<style>
+	section { display:inline-block; width:320px; margin-right:5px; }
+	video,canvas { display:block; width:320px; height:240px; }
+	</style>
+</head>
+<body>
+
+<article>
+	<h1>Video getUserMedia</h1>
+	<section>
+		<video id="video"></video>		
+		<button onclick="var that = this;document.getElementById('video').init(function(){that.disabled = true});">Get Video</button>
+		<button onclick="document.getElementById('video').play();">Play Video</button>
+		<button onclick="document.getElementById('video').pause();">Pause Video</button>
+	</section>
+
+	<section>
+		<canvas id="canvas"></canvas>
+		<button onclick="getPhoto()">Get Photo</button>
+	</section>
+</article>
+
+<script>
+
+
+function video_extend(){
+
+	//验证对象是否正确
+	if(!this.tagName || this.tagName != "VIDEO"){
+		console.log("Error : Object.tagName != \"VIDEO\"");
+		return;
+	}
+
+	//函数兼容处理
+	navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia|| navigator.mozGetUserMedia|| navigator.msGetUserMedia;
+	window.URL = window.URL|| window.webkitURL|| window.mozURL|| window.msURL;
+
+	//检查浏览器是否支持getUserMedia方法
+	if(!navigator.getUserMedia){
+		console.log("Error : getUserMedia undefined");
+		return;
+	}
+
+	var that = this;
+
+	//初始化：获取视频来源
+	this.init = function(callback){		
+		navigator.getUserMedia(
+			{
+				video : true
+			},
+			function (stream) {
+				if(that.mozSrcObject !== undefined)
+					that.mozSrcObject = stream;
+				else
+					that.src = (window.URL && window.URL.createObjectURL(stream) || stream);
+				//默认暂停
+				that.pause();
+				if(callback && typeof callback === "function"){
+					callback();
+				}
+			},
+			function (error) {
+				console.log("ErrorCode : getUserMedia - " + error.code);
+			}
+		);
+	}
+}
+
+//截图
+function getPhoto() {
+	var videoObj = document.getElementById('video'),
+		w = 320,
+		h = 240,
+		canvasObj = document.getElementById('canvas'),
+		context1 = canvasObj.getContext('2d');
+	canvasObj.width = w;
+	canvasObj.height = h;
+	context1.fillStyle = "#ffffff";
+	context1.fillRect(0, 0, w, h);
+	context1.drawImage(videoObj, 0, 0, w, h);
+}
+
+video_extend.call(document.getElementById("video"));
+
+ </script>
+</body>
+</html>
