@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>JSON Add Index</title>
+</head>
+<body>
+
+<script>
+//创建DOM对象并加入到文档
+function setBody(val){
+	var tag = document.createElement("p");
+		tag.innerHTML = val;
+	document.getElementsByTagName("body")[0].appendChild(tag);
+};
+
+//添加索引并返回数据
+function getJson (data,name){
+	//给数据添加索引
+	var newData = {},
+		num = 0;
+	for (k in data){
+		newData[k] = data[k];
+		newData[k]["index"] = num;
+		num ++;
+	};
+	newData.length = num;
+	//获取指定数据
+	var getData = function(index){
+		if(index < 0){
+			index = num + index;
+		}
+		if(index < 0 || index >= num)
+			return;
+		for(i in newData){
+			if(i == index)
+				return newData[i];
+			for(k in newData[i]){
+				if(newData[i][k] == index)
+					return newData[i];
+			}
+		}
+	};	
+	//如果指定返回数据名
+	if(name){
+		//获取当前索引号
+		var index = getData(name).index,
+			//获取当前数据
+			indexData = getData(index);
+			indexData.prev = getData(index - 1);
+			indexData.next = getData(index + 1);
+			indexData.eq = function(i){
+				return getData(i);
+			};
+	}
+	else {
+		var indexData = newData;
+		indexData.eq = function(i){
+			return getData(i);
+		};
+	}
+	//返回指定数据
+	return indexData;
+};
+
+//原始数据
+var data = {
+	a : {
+		title : "一号",
+		cont : "一号正文",
+		type : "core"
+	},
+	b : {
+		title : "二号",
+		cont : "二号正文",
+		type : "core"
+	},
+	c : {
+		title : "三号",
+		cont : "三号正文",
+		type : "ui"
+	},
+	d : {
+		title : "四号",
+		cont : "四号正文",
+		type : "ui"
+	}
+};
+//传入原始数据与指定数据名。返回当前指定数据，包含获取上下组数据方法
+var prgg = getJson(data,"b");
+
+setBody("当前:" + prgg.type + "," + prgg.index + "," + prgg.title + "," + prgg.cont);
+setBody("上一个:" + prgg.prev.type + "," + prgg.prev.index + "," + prgg.prev.title + "," + prgg.prev.cont);
+setBody("下一个:" + prgg.next.type + "," + prgg.next.index + "," + prgg.next.title + "," + prgg.next.cont);
+setBody("指定最后一个:" + prgg.eq(-1).type + "," + prgg.eq(-1).index + "," + prgg.eq(-1).title + "," + prgg.eq(-1).cont);
+
+
+//传入原始数据。返回带索引完整数据，包含数据长度
+var prgg2 = getJson(data);
+
+setBody("指定第一个:" + prgg2.eq(0).type + "," + prgg2.eq(0).index + "," + prgg2.eq(0).title + "," + prgg2.eq(0).cont);
+setBody("获取长度:" + prgg2.length);
+</script>
+
+</body>
+</html>
