@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+<head>
+<title>Demo Placeholder</title>
+<meta charset="utf-8">
+<style>
+li { margin:1em; }
+</style>
+<script src="http://cdn.staticfile.org/jquery/1.7.1/jquery.min.js"></script>
+<script>
+var J = {
+	log : true
+};
+/*
+ * 表单项文本框 - 默认文本的交互行为支持
+ * @param	{Object}	objs	Dom对象，可多个
+ * @param	{Array}	colors	长度2，0 = 默认字体颜色，1 = 改变后字体颜色
+ * @return	{Array}	长度为总计遍历的对象，0代表未加载逻辑处理，1反之
+ */
+J.placeholder = function(objs,colors) {
+	//参数处理
+	var $this = $(objs),
+		relogs = [];
+	colors = colors && colors.constructor == Array ? colors : ["gray","black"];
+	//逻辑处理
+	function init(obj){
+		//支持placeholder
+		if(typeof obj.get(0).placeholder === "string"){
+			return 0;
+		}
+		//非支持placeholder
+		else{
+			var placeholderText = obj.attr("placeholder");
+			if(typeof placeholderText !== "undefined"){
+				obj.val(placeholderText).css("color",colors[0]);
+				obj.focus(function(){
+					if(this.value === placeholderText){
+						$(this).val("").css("color",colors[1]);
+					}
+				}).blur(function(){
+					if(this.value === ""){
+						$(this).val(placeholderText).css("color",colors[0]);
+					}
+				});
+				return 1;
+			}
+			else{
+				return 0;
+			}
+		}
+	};
+	//如果对象存在
+	if($this.length){		
+		//遍历对象并初始化
+		$this.each(function(){
+			relogs.push(init($(this)));
+		});
+		if(J.log && window.console && console.log){
+			console.log("J.placeholder : ",relogs);
+		}
+	}
+	return relogs;
+};
+$(function(){
+	J.placeholder($("input,textarea"));
+});
+</script>
+</head>
+<body>
+
+<article>
+
+	<h1>Demo Placeholder</h1>
+	
+	<section>
+		<ol>
+			<li><input placeholder="Test"></li>
+			<li><input placeholder="Test 2"></li>
+			<li><textarea placeholder="Test 3"></textarea></li>
+			<li><input type="password" placeholder="add password"></li>
+			<li><input></li>
+		</ol>
+	</section>
+
+</article>
+
+</body>
+</html>
