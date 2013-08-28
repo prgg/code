@@ -30,8 +30,8 @@ J.placeholder = function(objs,colors) {
 	ui.blur = function(obj,placeholderText){
 		obj.val(placeholderText).css("color",colors[0]);
 	};
-	//行为
-	function init(obj){
+	//行为初始化
+	function event_init(obj){
 		//支持placeholder
 		if(typeof obj.get(0).placeholder === "string"){
 			return 0;
@@ -61,7 +61,7 @@ J.placeholder = function(objs,colors) {
 	if($this.length){		
 		//遍历对象并初始化
 		$this.each(function(){
-			relogs.push(init($(this)));
+			relogs.push(event_init($(this)));
 		});
 		if(J.log && window.console && console.log){
 			console.log("J.placeholder : ",relogs);
