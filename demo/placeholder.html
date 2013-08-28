@@ -20,9 +20,17 @@ var J = {
 J.placeholder = function(objs,colors) {
 	//参数处理
 	var $this = $(objs),
-		relogs = [];
+		relogs = [],
+		ui = {};
 	colors = colors && colors.constructor == Array ? colors : ["gray","black"];
-	//逻辑处理
+	//表现
+	ui.focus = function(obj,placeholderText){
+		obj.val("").css("color",colors[1]);
+	};
+	ui.blur = function(obj,placeholderText){
+		obj.val(placeholderText).css("color",colors[0]);
+	};
+	//行为
 	function init(obj){
 		//支持placeholder
 		if(typeof obj.get(0).placeholder === "string"){
@@ -32,14 +40,14 @@ J.placeholder = function(objs,colors) {
 		else{
 			var placeholderText = obj.attr("placeholder");
 			if(typeof placeholderText !== "undefined"){
-				obj.val(placeholderText).css("color",colors[0]);
+				ui.blur(obj,placeholderText);
 				obj.focus(function(){
 					if(this.value === placeholderText){
-						$(this).val("").css("color",colors[1]);
+						ui.focus($(this),placeholderText);
 					}
 				}).blur(function(){
 					if(this.value === ""){
-						$(this).val(placeholderText).css("color",colors[0]);
+						ui.blur($(this),placeholderText);
 					}
 				});
 				return 1;
