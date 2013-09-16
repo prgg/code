@@ -6,15 +6,14 @@
 	<style>
 	body { color:#666; }
 	h1 { position:fixed; top:20%; left:10%; z-index:-1; margin:0; font-size:15em; color:#f9f9f9; }
-	section { margin:1em; }
-		ol > li { padding:.5em 0 ; font-weight:bolder; line-height:2em; border-bottom:1px dotted #eee; }
-		ol > li:last-child { border:0; }
-		ol > li:after,
-		ol > li:before { content:"}"; margin:0 .5em; font-weight:bolder; color:#eee; }
-		ol > li:before { content:"{"; }
-		ol > li:hover { color:#000; }
+	section { margin:1em; display:-webkit-box; }
+		article { -webkit-box-flex:1; padding:.5em 0; min-width:20em; font-weight:bolder; line-height:2em; border-bottom:1px dotted #eee; }
+		article:last-child { /*border:0;*/ }
+		article:after,
+		article:before { content:"}"; margin:0 .5em; font-weight:bolder; color:#eee; }
+		article:before { content:"{"; }
 		ul { margin:0 2.5em; }
-		ul li { font-weight:normal; }
+		ul li { font-weight:normal; white-space:nowrap; }
 		em,strong { font-weight:normal; font-style:italic; font-family:"Georgia"; font-size:1.5em; color:#f69; }
 		em:after { content:"K"; font-size:.5em; }
 	</style>
@@ -25,55 +24,53 @@
 	<h1>To Do List</h1>
 	
 	<section>
-		<ol>
-			<li id="a">固定资金 <em>0</em>
-				<ul>
-					<li>装修 <em>30</em>
-						<ul>
-							<li>瓷砖 刷墙</li>
-							<li>通水电</li>
-							<li>上下床 三件套</li>
-							<li>蹲坑 洗手台 热水器</li>
-							<li>灶台 燃气灶 锅碗瓢盆</li>
-						</ul>
-					</li>
-					<li>设备 <em>30</em>
-						<ul>
-							<li>台式电脑 双屏</li>
-							<li>桌椅</li>
-							<li>插线板</li>
-							<li>网线 交换机</li>
-						</ul>
-					</li>
-					<li>杂项 <em>10</em>
-						<ul>
-							<li>饮水机</li>
-						</ul>
-					</li>
-				</ul>
-			</li>
-			<li id="b">运维资金 <em>0</em>
-				<ul>
-					<li>员工数 <strong>5</strong> 
-						<ul>
-							<li>薪酬 <em>2</em></li>
-							<li>早餐 <em>0.12</em></li>
-							<li>午餐 <em>0.22</em></li>
-							<li>晚餐 <em>0.22</em></li>
-							<li>夜宵 <em>0.12</em></li>
-						</ul>
-					</li>
-					<li>房租 <em>2</em></li>
-					<li>卫生管理 <em>0.3</em></li>
-					<li>厨师 <em>1.2</em></li>
-				</ul>
-			</li>
-		</ol>
+		<article id="a">固定资金 <em>0</em>
+			<ul>
+				<li>装修 <em>30</em>
+					<ul>
+						<li>瓷砖 刷墙</li>
+						<li>通水电</li>
+						<li>上下床 三件套</li>
+						<li>蹲坑 洗手台 热水器</li>
+						<li>灶台 燃气灶 锅碗瓢盆</li>
+					</ul>
+				</li>
+				<li>设备 <em>30</em>
+					<ul>
+						<li>台式电脑 双屏</li>
+						<li>桌椅</li>
+						<li>插线板</li>
+						<li>网线 交换机</li>
+					</ul>
+				</li>
+				<li>杂项 <em>10</em>
+					<ul>
+						<li>饮水机</li>
+					</ul>
+				</li>
+			</ul>
+		</article>
+		<article id="b">运维资金 <em>0</em>
+			<ul>
+				<li>员工数 <strong>5</strong> 
+					<ul>
+						<li>薪酬 <em>2</em></li>
+						<li>早餐 <em>0.12</em></li>
+						<li>午餐 <em>0.22</em></li>
+						<li>晚餐 <em>0.22</em></li>
+						<li>夜宵 <em>0.12</em></li>
+					</ul>
+				</li>
+				<li>房租 <em>2</em></li>
+				<li>卫生管理 <em>0.3</em></li>
+				<li>厨师 <em>1.2</em></li>
+			</ul>
+		</article>
 	</section>
 
 <script>
 (function(){
-	var a = 0,b = 0,b1 = 0,b2 = 0;
+	var a = 0,b1 = 0,b2 = 0;
 
 	$("#a em").each(function(){
 		a += this.innerHTML - 0;
