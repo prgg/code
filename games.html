@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 	<style>
 	body { color:#666; }
-	h1 { position:absolute; top:0; left:30%; z-index:-1; margin:0; font-size:15em; color:#f9f9f9; }
+	h1 { position:fixed; top:20%; left:10%; z-index:-1; margin:0; font-size:15em; color:#f9f9f9; }
 	section { margin:1em; }
 		ol > li { padding:.5em 0 ; font-weight:bolder; line-height:2em; border-bottom:1px dotted #eee; }
 		ol > li:last-child { border:0; }
@@ -25,9 +25,8 @@
 	<h1>To Do List</h1>
 	
 	<section>
-		<h2 id="z">总额 <em>0</em></h2>
 		<ol>
-			<li id="a">固定投资
+			<li id="a">固定投资 <em></em>
 				<ul>
 					<li>装修 <em>30</em>
 						<ul>
@@ -53,7 +52,7 @@
 					</li>
 				</ul>
 			</li>
-			<li id="b">运维资金
+			<li id="b">运维资金 <em></em>
 				<ul>
 					<li>人数 <strong>5</strong>/组</li>
 					<li>薪酬体系 <em>2</em>/每人</li>
@@ -71,18 +70,19 @@
 
 <script>
 (function(){
-	var z = $("#z em"),
-		a = $("#a em"),
+	var a = $("#a em"),
 		b = $("#b em"),
 		b_num = $("#b strong"),
 		max = 0;
 	a.each(function(){
 		max += this.innerHTML - 0;
 	});
+	a.eq(0).html(max);
+	max = 0;
 	b.each(function(){
 		max += this.innerHTML * b_num.html();
 	});
-	z.html(max);
+	b.eq(0).html(max);
 })();
 </script>
 </body>
