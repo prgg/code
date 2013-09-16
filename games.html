@@ -26,7 +26,7 @@
 	
 	<section>
 		<ol>
-			<li id="a">固定投资 <em></em>
+			<li id="a">固定资金 <em>0</em>
 				<ul>
 					<li>装修 <em>30</em>
 						<ul>
@@ -52,20 +52,20 @@
 					</li>
 				</ul>
 			</li>
-			<li id="b">运维资金 <em></em>
+			<li id="b">运维资金 <em>0</em>
 				<ul>
-					<li>人数 <strong>5</strong>/组</li>
-					<li>薪酬 <em>2</em>/每人</li>
-					<li>其他 
+					<li>员工数 <strong>5</strong> 
 						<ul>
+							<li>薪酬 <em>2</em></li>
 							<li>早餐 <em>0.12</em></li>
 							<li>午餐 <em>0.22</em></li>
 							<li>晚餐 <em>0.22</em></li>
 							<li>夜宵 <em>0.12</em></li>
-							<li>床位 <em>0.1</em></li>
-							<li>卫生 <em>0.1</em></li>
 						</ul>
 					</li>
+					<li>房租 <em>2</em></li>
+					<li>卫生管理 <em>0.3</em></li>
+					<li>厨师 <em>1.2</em></li>
 				</ul>
 			</li>
 		</ol>
@@ -73,21 +73,26 @@
 
 <script>
 (function(){
-	var a = $("#a em"),
-		b = $("#b em"),
-		b_num = $("#b strong"),
-		max = 0;
+	var a = 0,b = 0,b1 = 0,b2 = 0;
 
-	a.each(function(){
-		max += this.innerHTML - 0;
+	$("#a em").each(function(){
+		a += this.innerHTML - 0;
 	})
-	.eq(0).html(Math.round(max*100)/100);
-	
-	max = 0;
-	b.each(function(){
-		max += this.innerHTML * b_num.html();
+	.eq(0).html(Math.round(a*100)/100);
+
+	$("#b li li > em").each(function(){
+		b1 += this.innerHTML * $(this).closest("#b").find("strong").html();
+	});
+
+	$("#b > em,#b > ul > li > em").each(function(){
+		b2 += this.innerHTML - 0;
 	})
-	.eq(0).html(Math.round(max*100)/100);
+	.eq(0).html(Math.round((b1 + b2)*100)/100);
+
+	console.log("总固定资金",a,"一次性");
+	console.log("总运维资金",b1 + b2,"/ 每月");
+	console.log("	员工福利费用",b1);
+	console.log("	房租、卫生管理、厨师",b2);
 })();
 </script>
 </body>
