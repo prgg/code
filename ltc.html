@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+	<title>Games Idea</title>
+	<meta charset="utf-8">
+	<style>
+	body { color:#666; }
+	h1 { position:fixed; top:20%; left:10%; z-index:-1; margin:0; font-size:15em; color:#f9f9f9; }
+	
+	</style>
+	<script src="http://cdn.staticfile.org/jquery/1.7.1/jquery.min.js"></script>
+</head>
+<body>
+
+	<h1>To Do List</h1>
+	
+	
+<script>
+(function(){
+	function onLTC(){
+		$.ajax({
+			url : "https://www.okcoin.com/ticker.do?random=17",
+			dataType : "json",
+			success : function(data){
+				console.log(data.ltcLast);
+			}
+		})
+	}
+	setInterval(onLTC,1000);
+})();
+</script>
+</body>
+</html>
