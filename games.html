@@ -32,9 +32,9 @@
 						<ul>
 							<li>瓷砖 刷墙</li>
 							<li>通水电</li>
-							<li>床</li>
+							<li>上下床 三件套</li>
 							<li>蹲坑 洗手台 热水器</li>
-							<li>灶台 燃气灶</li>
+							<li>灶台 燃气灶 锅碗瓢盆</li>
 						</ul>
 					</li>
 					<li>设备 <em>30</em>
@@ -58,10 +58,12 @@
 					<li>薪酬 <em>2</em>/每人</li>
 					<li>其他 
 						<ul>
-							<li>午餐 </li>
-							<li>夜宵 </li>
-							<li>床位 </li>
-							<li>卫生
+							<li>早餐 <em>0.12</em></li>
+							<li>午餐 <em>0.22</em></li>
+							<li>晚餐 <em>0.22</em></li>
+							<li>夜宵 <em>0.12</em></li>
+							<li>床位 <em>0.1</em></li>
+							<li>卫生 <em>0.1</em></li>
 						</ul>
 					</li>
 				</ul>
@@ -75,15 +77,17 @@
 		b = $("#b em"),
 		b_num = $("#b strong"),
 		max = 0;
+
 	a.each(function(){
 		max += this.innerHTML - 0;
-	});
-	a.eq(0).html(max);
+	})
+	.eq(0).html(Math.round(max*100)/100);
+	
 	max = 0;
 	b.each(function(){
 		max += this.innerHTML * b_num.html();
-	});
-	b.eq(0).html(max);
+	})
+	.eq(0).html(Math.round(max*100)/100);
 })();
 </script>
 </body>
