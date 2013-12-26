@@ -15,11 +15,11 @@ body { font-size:16px; }
 	.header form button span { display:inline; text-indent:inherit; width:auto; height:auto; background:none; font-size:1em; }
 .page { padding:1em; background:#eee; }
 
-.t_con {  }
-	.t_con li { position:relative; overflow:hidden; }
-	.t_con li img { box-sizing:border-box; width:100%; border:.5em solid #fff; }
+.t_con { overflow:hidden;  }
+	.t_con li { position:relative; overflow:hidden; margin-bottom:1em; }
+	.t_con li img { box-sizing:border-box; width:100%; border:.5em solid #fff; margin-bottom:1em; }
 	.t_con {  }
 	.t_con {  }
-@media (min-width:641px){
-	.t_con li img { width:20em; float:left; }
+@media (min-width:640px){
+	.t_con li img { width:33%; float:left; margin:0 1em 0 0; }
 }
