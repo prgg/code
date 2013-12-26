@@ -1,0 +1,55 @@
+@charset="utf-8";
+
+.page{ background:url(../imgs/1218.png) 0 0 repeat;}
+.subject{ margin:25px auto!important;}
+.nav3_wrap{ margin-bottom:0;}
+.clearfix {*zoom:1;}
+.clearfix:after { content: "."; visibility: hidden; display: block; clear: both; height: 0;}
+.float-nva_login-8{ padding-bottom:0;}
+
+.cont_logo { background:url(../imgs/top_x.png?v=1) top left repeat-x; height:588px; /*height:544px; background: #b6221e url(../imgs/ssy_cont_logo01.jpg) repeat-x;*/}
+    .cont_logo .logo_img { height:588px; background:url(../imgs/top_bg.jpg?v=1) no-repeat center center; }
+
+.t_con{ width:960px; margin:0 auto; overflow:hidden;}
+.juitem{ margin:0 -30px 0 0;}
+.juitem li{ position:relative; float:left; display:inline; width:310px;/* height:410px;*/ border:1px solid #d9d9d9; border-radius:5px; margin:0 12px 35px 0; background-color:#fff;}
+.juitem li .img_wrap{ border:5px solid #fff; border-radius:5px; text-align:center;}
+.juitem li .img_wrap:hover{ border:5px solid #ff507b;}
+.juitem li .img_wrap a{ display:table-cell; _display:block; vertical-align:middle; width:300px; height:300px;}
+.juitem li .img_wrap a img{ vertical-align:middle;}
+.juitem .title{ width:290px; height:22px; margin:5px auto 0 auto; overflow:hidden;/* text-overflow: ellipsis; white-space: nowrap;*/ font-size:14px; font-weight:700; color:#333;}
+.juitem .title a{ color:#333;}
+.juitem .title a:hover{ color:#f39;}
+.juitem .discount{ float:left; font-size:12px; padding:0 15px 0 10px; color:#ff507b; font-family:Tahoma, Geneva, sans-serif;}
+.juitem .discount b{ font-size:44px;}
+.juitem .price{ float:left; color:#666; padding:12px 0 0 0;}
+.juitem .price .orgin{ text-decoration:line-through;}
+.juitem .price .now{ color:#333; font-family:'微软雅黑'; font-size:18px;}
+.juitem .postage{ position:absolute; right:0; bottom:25px; display:block; text-indent:-2000em; overflow:hidden; background:url(../imgs/postage.png) 0 0 no-repeat; width:52px; height:18px;}
+
+.btm_pop{ background-color:#00a8ff;}
+.btm_pop .btm_con{ position:relative; background:url(../imgs/960x217.jpg) 0 0 no-repeat; width:960px; margin:0 auto; height:217px;}
+.btm_pop .focus_xks{ position:absolute; top:65px; left:450px; width:67px; height:24px;}
+.btm_pop .add_qq{ position:absolute; top:65px; left:640px; width:100px; height:24px; font-weight:700; line-height:24px;}
+
+.btm_pop .add_mail{ position:absolute; top:161px; left:448px;}
+.btm_pop .add_mail input{ float:left; padding:4px 0 4px 7px; border:0 none; width:155px; background-color:#ffe680;}
+.btm_pop .add_mail a{ float:left; display:block; width:43px; height:24px; margin:0 0 0 6px;}
+
+.btm_pop .add_tel{ position:absolute; top:161px; left:775px;}
+.btm_pop .add_tel input{ float:left; padding:4px 0 4px 7px; border:0 none; width:100px; background-color:#ffe680;}
+.btm_pop .add_tel a{ float:left; display:block; width:43px; height:24px; margin:0 0 0 6px;}
+
+.btm_pop .m_submit{ color:#f00; top:135px; left:535px; position:absolute;}
+.btm_pop .t_submit{ color:#f00; top:135px; left:858px; position:absolute;}
+#js-show-popups{display:none;}
+.advertisement { width:960px; height:100px; margin:0 auto 20px;}
+
+/* 侧边栏 */
+	.right_nav{ position: fixed; _position: absolute; top: -1000em; right: -1000em; width: 127px; height:286px; z-index:11; background:url(../imgs/right_nav.png) 0 0 no-repeat;}
+	.right_nav ul { padding:75px 0 0 0;}
+	.right_nav li{ width: 127px; height: 40px; line-height: 32px; text-align: center; cursor: pointer;}
+	.right_nav li a{ color: #00411f; font-size:16px; font-family:'微软雅黑';}
+	.right_nav li.cur{ position: relative; z-index: 1; width: 173px; background-color: #f39; margin:0 -1px 0 -18px; _margin:0 -3px 0 -18px; background:url(../imgs/curbg_1.png) 1px 0 no-repeat; text-align:left; text-indent:40px;}
+	.right_nav li.cur a{ font-size:16px; color:#fff600;}
+	.right_nav li a:hover{ color:#d11430; text-decoration: none;}

@@ -1,0 +1,581 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>11.11</title>
+<link type="text/css" rel="stylesheet" href="css/base_1308.css" />
+<script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="js/jquery.jrumble.1.3.min.js"></script>
+<!-- viewport 定义用户界面 ，宽度为设备宽度 ，并不可缩放 -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+<script>
+(function(){
+if(/AppleWebKit.*Mobile/i.test(navigator.userAgent) || (/MIDP|SymbianOS|NOKIA|SAMSUNG|LG|NEC|TCL|Alcatel|BIRD|DBTEL|Dopod|PHILIPS|HAIER|LENOVO|MOT-|Nokia|SonyEricsson|SIE-|Amoi|ZTE/.test(navigator.userAgent))){
+	if(window.location.href.indexOf("?mobile")<0){
+		try{
+			//if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)){
+				setActiveStyleSheet("20131218_mobile.css");
+			//}
+			//else if(/iPad/i.test(navigator.userAgent)){
+			//	setActiveStyleSheet("20131218_mobile_ipad.css");
+			//}
+			//else{
+			//	setActiveStyleSheet("20131218_mobile_more.css");
+			//}
+		}
+		catch(e){}
+	}
+}
+else{
+	setActiveStyleSheet("20131218.css");
+}
+function setActiveStyleSheet(filename){
+	document.write("<link href=css/"+filename+" rel=stylesheet>");
+}
+})();
+</script>
+</head>
+
+<body>
+<!--登陆条-->
+<div class="web-tools">
+    <div class="box">
+        <div id="js-base-addjcn" class="jcn">
+            <h2>关注我们：</h2>
+            <div class="impor">
+                <ul>
+                    <li><a id="top_sina" class="add-weibo" title="在[微博]关注简单网" href="javascript:void(0)"><i class="icon-weibo-min"></i><span>在[微博]关注简单网</span></a></li>
+                    <li><a id="top_qqzone" class="add-qzone" title="在[QQ空间]关注简单网" href="javascript:void(0)"><i class="icon-qzone-min"></i><span>在[QQ空间]关注简单网</span></a><span>65万</span></li>
+                </ul>
+            </div>
+            <div class="more">
+                <ul>
+                    <li><iframe width="136" scrolling="no" height="26" frameborder="0" src="http://widget.weibo.com/relationship/followbutton.php?language=zh_cn&amp;width=136&amp;height=24&amp;uid=1836430855&amp;style=2&amp;btn=light&amp;dpc=1" border="0" marginheight="0" marginwidth="0" allowtransparency="true"></iframe></li>
+                    
+                </ul>
+                <!--start xks-->
+                <ul class="xks">
+                  <li>
+                    <span class="face"><img src="imgs/lanxin.jpg" width="64" height="64" /></span>
+                    <p>蓝心</p>
+                    <p class="num"><span class="c_3cf">71.1万</span>粉丝</p>
+                    <p><span class="focus_btn"></span></p>
+                  </li>
+                  <li>
+                    <span class="face"><img src="imgs/xiaochen.jpg" width="64" height="64" /></span>
+                    <p>晓晨</p>
+                    <p class="num"><span class="c_3cf">71.1万</span>粉丝</p>
+                    <p><span class="focus_btn"></span></p>
+                  </li>
+                  <li>
+                    <span class="face"><img src="imgs/ruizi.jpg" width="64" height="64" /></span>
+                    <p>睿子</p>
+                    <p class="num"><span class="c_3cf">71.1万</span>粉丝</p>
+                    <p><span class="focus_btn"></span></p>
+                  </li>
+                </ul>
+                <!--end xks-->
+            </div>
+        </div>
+        <script>
+        (function(){
+            $("#js-base-addjcn").hover(
+                function(){
+                    $(this).addClass("hover");
+                },
+                function(){
+                    $(this).removeClass("hover");
+                }
+            );
+        })();
+        </script>
+        <div class="user">
+            <h2>注册与登录</h2>
+	            <ul>
+	                <li><a target="_blank" href="/share/login/qq?location=top_login_qz&amp;cb=%2Fshop%2F1439"><i class="icon-qq-min"></i>QQ登录</a></li>
+	                <li><a target="_blank" href="/share/login/sina?location=top_login_wb&amp;cb=%2Fshop%2F1439"><i class="icon-weibo-min"></i>微博登录</a></li>
+	            </ul>
+	            <div>
+                    <a target="_blank" class="login" href="/login?cb=%2Fshop%2F1439">登录</a>
+                </div>
+	        </div>
+    </div>
+</div>
+<!--登陆条 end-->
+
+<!--头部内容未登陆-->
+<div class="header">
+    <h1><a href="/"><img title="简单网 - www.j.cn" alt="简单网 - www.j.cn" src="http://image.guang.j.cn/images/imgs/logo130808.png"></a></h1>
+    <div>
+		<a target="_blank" class="test_style" onclick="recordBackUrl('%2Fshop%2F1439','header')" href="/pickxks_new?location=header">风格测试<i class="icon-right-3"></i></a>
+             <a target="_blank" class="test_style" href="/xks">热门选款师<i class="icon-right-4"></i></a>
+		</div>
+    <form action="/search/s">
+        <fieldset>
+            <input type="hidden" value="self_search" name="src">
+            <legend>www.j.cn 搜索</legend>
+            <input type="text" name="wd" id="js-base-login-input" value="" placeholder="搜宝贝"> 
+            <button type="submit"><span>开始搜索</span></button>
+        </fieldset>
+    </form>
+</div>
+<!--头部内容未登陆 end-->
+
+<!--nav 导航-->
+<div id="js-base-web-nav-cont" class="web-nav">
+    <div class="web-nav-box">
+        <h2>站内导航</h2>
+        <div class="list">
+            <h3>推荐频道</h3>
+            <ul>
+                <li><a href="/?src=nav_c_idxnew">首页</a></li>
+                <li><a href="/cate/j_shangyi?src=nav_c_shangyi">上衣</a>
+                    <i><a href="/cate/j_shangyi/1345/?src=nav_sy_hot1">风衣</a><a href="/cate/j_shangyi/1351/?src=nav_sy_hot2">毛衣</a></i>
+                </li>
+                <li>
+                    <a href="/cate/j_qunzi?src=nav_c_qunzi">裙子</a>
+                </li>
+                <li><a href="/cate/j_kuzi?src=nav_c_kuzi">裤子</a></li>
+                <li>
+                    <a href="/cate/j_xiezi?src=nav_c_xiezi">女鞋</a>
+                    <i><a href="/cate/j_xiezi/1358?src=nav_c_hot3">短靴</a><a href="/cate/j_xiezi/234?src=nav_c_hot4">单鞋</a></i>
+                </li>
+                <li class="last"><a href="/j_bao?src=nav_c_bao">包包</a></li>
+                <li id="js-base-addAnimate-myyichu" class="yichu">
+				    <a onclick="loginYichu()" href="javascript:void(0)"><i class="icon-yichu"></i>我的衣橱</a>
+                      <i id="js-base-addAnimate-addOne" class="icon-yichu icon-addAnimate-addOne">+1</i>
+                </li>
+                <li class="hot">
+                    <a href="/yichu2?src=nav_c_new">每日新品</a> 
+                    <!-- <a href="/jingpin?src=nav_c_jingpin">每日精品</a> -->
+                </li>
+            </ul>
+        </div>
+        <div class="all">
+            <h3 class="js-base-web-nav-event">全部分类<i></i></h3>
+            <ul class="js-base-web-nav-event">
+	            <li>
+	                <dl>
+	                    <dt>
+	                        <a href="/j_shangyi?src=nav_c_all">上衣</a>
+	                    </dt>
+	                    <dd>
+	                        <a href="/cate/j_shangyi/98/?src=nav_c_all" class="cred"><span>雪纺衫<i></i></span>
+	                        </a> <a href="/cate/j_shangyi/94/?src=nav_c_all"><span>T恤<i></i></span>
+	                        </a> <a href="/cate/j_shangyi/95/?src=nav_c_all"><span>衬衫<i></i></span>
+	                        </a> <a href="/cate/j_shangyi/104/?src=nav_c_all"><span>小衫<i></i></span>
+	                        </a> <a href="/cate/j_shangyi/96/?src=nav_c_all" class="cred"><span>蕾丝衫<i></i></span>
+	                        </a> <a href="/cate/j_shangyi/97/?src=nav_c_all"><span>开衫<i></i></span>
+	                        </a> <a href="/cate/j_shangyi/99/?src=nav_c_all"><span>小西装<i></i></span>
+	                        </a> <a href="/cate/j_shangyi/100/?src=nav_c_all" class="cred"><span>防晒衫<i></i></span>
+	                        </a> <a href="/cate/j_shangyi/302/?src=nav_c_all"><span>短外套<i></i></span>
+	                        </a> <a href="/cate/j_shangyi/101/?src=nav_c_all" class="cred"><span>背心<i></i></span>
+	                        </a> <a href="/cate/j_shangyi/285/?src=nav_c_all"><span>罩衫<i></i></span>
+	                        </a> <a href="/cate/j_shangyi/102/?src=nav_c_all"><span>马甲<i></i></span>
+	                        </a> <a href="/cate/j_shangyi/103/?src=nav_c_all" class="cred"><span>针织衫<i></i></span>
+	                        </a> <a href="/cate/j_shangyi/284/?src=nav_c_all"><span>吊带<i></i></span>
+	                        </a> <a href="/cate/j_shangyi/287/?src=nav_c_all"><span>卫衣<i></i></span>
+	                        </a> <a href="/cate/j_shangyi/286/?src=nav_c_all"><span>polo衫<i></i></span>
+	                        </a>
+	                    </dd>
+	                    <dt class="skirt">
+	                        <a href="/cate/j_qunzi?src=nav_c_all">裙子</a>
+	                    </dt>
+	                    <dd>
+	                        <a href="/cate/j_qunzi/34?src=nav_c_all" class="cred"><span>连衣裙<i></i></span>
+	                        </a> <a href="/cate/j_qunzi/17?src=nav_c_all"><span>短裙<i></i></span>
+	                        </a> <a href="/cate/j_qunzi/6?src=nav_c_all" class="cred"><span>半身裙<i></i></span>
+	                        </a> <a href="/cate/j_qunzi/82?src=nav_c_all" class="cred"><span>长裙<i></i></span>
+	                        </a> <a href="/cate/j_qunzi/8?src=nav_c_all"><span>背心裙<i></i></span>
+	                        </a> <a href="/cate/j_qunzi/78?src=nav_c_all" class="cred"><span>雪纺裙<i></i></span>
+	                        </a> <a href="/cate/j_qunzi/80?src=nav_c_all"><span>印花裙<i></i></span>
+	                        </a> <a href="/cate/j_qunzi/33?src=nav_c_all"><span>蕾丝裙<i></i></span>
+	                        </a> <a href="/cate/j_qunzi/5?src=nav_c_all" class=""><span>百褶裙<i></i></span>
+	                        </a> <a href="/cate/j_qunzi/50?src=nav_c_all" class=""><span>沙滩裙<i></i></span>
+	                        </a> <a href="/cate/j_qunzi/48?src=nav_c_all" class="cred"><span>伞摆裙<i></i></span>
+	                        </a> <a href="/cate/j_qunzi/87?src=nav_c_all" class=""><span>中长连衣裙<i></i></span>
+	                        </a> <a href="/cate/j_qunzi/42?src=nav_c_all" class=""><span>蓬蓬裙<i></i></span>
+	                        </a> <a href="/cate/j_qunzi/10?src=nav_c_all" class=""><span>衬衫连衣裙<i></i></span>
+	                        </a> <a href="/cate/j_qunzi/7?src=nav_c_all" class=""><span>包臀裙<i></i></span>
+	                        </a>
+	                    </dd>
+	                    <dt class="underwear">
+	                        <a href="/j_neiyi?src=nav_c_all">内衣/泳衣/家服</a>
+	                    </dt>
+	                    <dd>
+	                        <a href="/j_neiyi/463?src=nav_c_all" class="cred"><span>Bra<i></i></span>
+	                        </a> <a href="/j_neiyi/464?src=nav_c_all"><span>内衣套装<i></i></span>
+	                        </a> <a href="/j_neiyi/460?src=nav_c_all"><span>内裤<i></i></span>
+	                        </a> <a href="/j_neiyi/461?src=nav_c_all" class="cred"><span>家居服<i></i></span>
+	                        </a> <a href="/j_neiyi/465?src=nav_c_all"><span>睡衣/睡裙<i></i></span>
+	                        </a> <a href="/j_neiyi/468?src=nav_c_all"><span>无痕内衣<i></i></span>
+	                        </a> <a href="/j_neiyi/462?src=nav_c_all" class="cred"><span>泳衣<i></i></span>
+	                        </a> <a href="/j_neiyi/467?src=nav_c_all"><span>隐形内衣<i></i></span>
+	                        </a> <a href="/j_neiyi/469?src=nav_c_all"><span>安全裤<i></i></span>
+	                        </a> <a href="/j_neiyi/466?src=nav_c_all"><span>塑身衣<i></i></span>
+	                        </a>
+	                    </dd>
+	                </dl>
+	            </li>
+	            <li>
+	                <dl>
+	                    <dt class="pants">
+	                        <a href="/j_kuzi?src=nav_c_all">裤子</a>
+	                    </dt>
+	                    <dd>
+	                        <a href="/cate/j_kuzi/142/?src=nav_c_all"><span>铅笔裤<i></i></span>
+	                        </a> <a href="/cate/j_kuzi/143/?src=nav_c_all" class="cred"><span>短裤<i></i></span>
+	                        </a> <a href="/cate/j_kuzi/144/?src=nav_c_all"><span>牛仔裤<i></i></span>
+	                        </a> <a href="/cate/j_kuzi/145/?src=nav_c_all"><span>裙裤<i></i></span>
+	                        </a> <a href="/cate/j_kuzi/151/?src=nav_c_all" class="cred"><span>连体裤<i></i></span>
+	                        </a> <a href="/cate/j_kuzi/150/?src=nav_c_all" class="cred"><span>背带裤<i></i></span>
+	                        </a> <a href="/cate/j_kuzi/147/?src=nav_c_all"><span>西装裤<i></i></span>
+	                        </a> <a href="/cate/j_kuzi/148/?src=nav_c_all" class="cred"><span>高腰裤<i></i></span>
+	                        </a> <a href="/cate/j_kuzi/149/?src=nav_c_all"><span>直筒裤<i></i></span>
+	                        </a> <a href="/cate/j_kuzi/153/?src=nav_c_all"><span>阔腿裤<i></i></span>
+	                        </a> <a href="/cate/j_kuzi/154/?src=nav_c_all" class="cred"><span>休闲裤<i></i></span>
+	                        </a> <a href="/cate/j_kuzi/146/?src=nav_c_all"><span>哈伦裤<i></i></span>
+	                        </a> <a href="/cate/j_kuzi/172/?src=nav_c_all"><span>长裤<i></i></span>
+	                        </a> <a href="/cate/j_kuzi/152/?src=nav_c_all" class="cred"><span>小脚裤<i></i></span>
+	                        </a> <a href="/cate/j_kuzi/176/?src=nav_c_all"><span>热裤<i></i></span>
+	                        </a> <a href="/cate/j_kuzi/175/?src=nav_c_all"><span>七分裤<i></i></span>
+	                        </a> <a href="/cate/j_kuzi/174/?src=nav_c_all"><span>五分裤<i></i></span>
+	                        </a>
+	                    </dd>
+	                    <dt class="shoes">
+	                        <a href="/cate/j_xiezi?src=nav_c_all">鞋子</a>
+	                    </dt>
+	                    <dd>
+	                        <a href="/cate/j_xiezi/232/?src=nav_c_all"><span>高跟鞋<i></i></span>
+	                        </a> <a href="/cate/j_xiezi/221/?src=nav_c_all"><span>凉鞋<i></i></span>
+	                        </a> <a href="/cate/j_xiezi/234/?src=nav_c_all"><span>单鞋<i></i></span>
+	                        </a> <a href="/cate/j_xiezi/225/?src=nav_c_all"><span>运动鞋<i></i></span>
+	                        </a> <a href="/cate/j_xiezi/226/?src=nav_c_all"><span>帆布鞋<i></i></span>
+	                        </a> <a href="/cate/j_xiezi/235/?src=nav_c_all"><span>松糕鞋<i></i></span>
+	                        </a> <a href="/cate/j_xiezi/224/?src=nav_c_all"><span>船鞋<i></i></span>
+	                        </a> <a href="/cate/j_xiezi/227/?src=nav_c_all"><span>布洛克鞋<i></i></span>
+	                        </a> <a href="/cate/j_xiezi/229/?src=nav_c_all"><span>果冻鞋<i></i></span>
+	                        </a> <a href="/cate/j_xiezi/220/?src=nav_c_all"><span>凉拖<i></i></span>
+	                        </a> <a href="/cate/j_xiezi/233/?src=nav_c_all"><span>鱼嘴鞋<i></i></span>
+	                        </a> <a href="/cate/j_xiezi/411/?src=nav_c_all" class="cred"><span>夹脚鞋<i></i></span>
+	                        </a> <a href="/cate/j_xiezi/230/?src=nav_c_all"><span>浅口鞋<i></i></span>
+	                        </a> <a href="/cate/j_xiezi/236/?src=nav_c_all" class="cred"><span>平底鞋<i></i></span>
+	                        </a> <a href="/cate/j_xiezi/228/?src=nav_c_all"><span>豆豆鞋<i></i></span>
+	                        </a>
+	                    </dd>
+	                    <dt class="child">
+	                        <a href="/j_tong?src=nav_c_all">童装</a>
+	                    </dt>
+	                    <dd>
+	                        <a href="/j_tong/472?src=nav_c_all"><span>衬衫<i></i> </span>
+	                        </a> <a href="/j_tong/473?src=nav_c_all"><span>哈衣<i></i></span>
+	                        </a> <a href="/j_tong/474?src=nav_c_all" class="cred"><span>短袖T恤<i></i></span>
+	                        </a> <a href="/j_tong/481?src=nav_c_all"><span>背心/马甲<i></i></span>
+	                        </a> <a href="/j_tong/488?src=nav_c_all" class="cred"><span>连衣裙<i></i></span>
+	                        </a> <a href="/j_tong/489?src=nav_c_all"><span>短裙<i></i></span>
+	                        </a> <a href="/j_tong/502?src=nav_c_all" class="cred"><span>短裤<i></i></span>
+	                        </a> <a href="/j_tong/499?src=nav_c_all"><span>长裤<i></i></span>
+	                        </a> <a href="/j_tong/475?src=nav_c_all"><span>长T<i></i></span>
+	                        </a> <a href="/j_tong/476?src=nav_c_all"><span>小西装<i></i></span>
+	                        </a> <a href="/j_tong/490?src=nav_c_all"><span>背心裙<i></i></span>
+	                        </a> <a href="/j_tong/491?src=nav_c_all"><span>雪纺裙<i></i></span>
+	                        </a>
+	                    </dd>
+	                </dl>
+	            </li>
+	            <li>
+	                <dl>
+	                    <dt class="bag">
+	                        <a href="/j_bao?src=nav_c_all">包包</a>
+	                    </dt>
+	                    <dd>
+	                        <a href="/j_bao/585?src=nav_c_all"><span>单肩包<i></i> </span>
+	                        </a> <a href="/j_bao/586?src=nav_c_all" class="cred"><span>斜挎包<i></i></span>
+	                        </a> <a href="/j_bao/147?src=nav_c_all"><span>双肩包<i></i></span>
+	                        </a> <a href="/j_bao/455?src=nav_c_all" class="cred"><span>链条包<i></i></span>
+	                        </a> <a href="/j_bao/449?src=nav_c_all"><span>机车包<i></i></span>
+	                        </a> <a href="/j_bao/149?src=nav_c_all"><span>钱包<i></i> </span>
+	                        </a> <a href="/j_bao/452?src=nav_c_all" class="cred"><span>邮差包<i></i></span>
+	                        </a> <a href="/j_bao/143?src=nav_c_all"><span>功能箱包<i></i></span>
+	                        </a> <a href="/j_bao/148?src=nav_c_all" class="cred"><span>手拿包<i></i></span>
+	                        </a> <a href="/j_bao/150?src=nav_c_all"><span>手提包<i></i></span>
+	                        </a> <a href="/j_bao/450?src=nav_c_all"><span>水桶包<i></i></span>
+	                        </a> <a href="/j_bao/453?src=nav_c_all"><span>迷你包<i></i></span>
+	                        </a> <a href="/j_bao/454?src=nav_c_all"><span>信封包<i></i></span>
+	                        </a> <a href="/j_bao/154?src=nav_c_all" class="cred"><span>旅行包<i></i></span>
+	                        </a>
+	                    </dd>
+	                    <dt class="accessories">
+	                        <a href="/j_peishi?src=nav_c_all">配饰</a>
+	                    </dt>
+	                    <dd>
+	                        <a href="/j_peishi/341?src=nav_c_all" class="cred"><span>项链<i></i></span>
+	                        </a> <a href="/j_peishi/343?src=nav_c_all"><span>耳钉/耳环<i></i></span>
+	                        </a> <a href="/j_peishi/342?src=nav_c_all"><span>戒指<i></i></span>
+	                        </a> <a href="/j_peishi/300?src=nav_c_all"><span>腰带<i></i></span>
+	                        </a> <a href="/j_peishi/411?src=nav_c_all" class="cred"><span>假领<i></i></span>
+	                        </a> <a href="/j_peishi/359?src=nav_c_all"><span>手链/手镯<i></i></span>
+	                        </a> <a href="/j_peishi/339?src=nav_c_all"><span>手表<i></i></span>
+	                        </a> <a href="/j_peishi/346?src=nav_c_all" class="cred"><span>发饰<i></i></span>
+	                        </a> <a href="/j_peishi/340?src=nav_c_all"><span>丝袜<i></i></span>
+	                        </a> <a href="/j_peishi/339?src=nav_c_all"><span>手表<i></i></span>
+	                        </a> <a href="/j_peishi/344?src=nav_c_all"><span>吊坠<i></i></span>
+	                        </a> <a href="/j_peishi/403?src=nav_c_all"><span>脚链<i></i></span>
+	                        </a> <a href="/j_peishi/404?src=nav_c_all"><span>挂件<i></i></span>
+	                        </a> <a href="/j_peishi/516?src=nav_c_all"><span>纹身贴<i></i></span>
+	                        </a>
+	                    </dd>
+	                </dl>
+	            </li>
+            </ul>
+        </div>
+    </div>
+    <div class="web-nav-box-bg"></div>
+    <div class="web-nav-ul-bg js-base-web-nav-event"></div>
+    <!--[if lt IE 9]>
+    <div class="shadow_05"></div>
+    <div class="shadow_04"></div>
+    <div class="shadow_03"></div>
+    <div class="shadow_02"></div>
+    <div class="shadow_01"></div>
+    <![endif]-->
+</div>
+
+
+<!-- nav标签 END-->
+  <!--start top_bg-->
+ <!-- <div class="top_bg11">
+    <div class="top_img">
+    </div>
+  </div>-->
+  <div class="cont_logo">
+		<div class="logo_img">
+		</div>
+	</div>
+  <!--end top_bg-->
+  <div class="page">
+    <div class="t_con">
+      <ul id="scroll_top" class="clearfix juitem">
+        <li>
+          <div class="img_wrap">
+            <a href="###"><img src="imgs/300x300.jpg" /></a>
+          </div>
+          <p class="title"><a href="###" target="_blank">粉色连衣裙搭配波点罩衫显配波，点罩衫配，波粉色连衣裙搭配波点罩衫显配波，点罩衫配，波粉色连衣裙搭配波点罩衫显配波，点罩衫配，波</a></p>
+          <p>
+            <span class="discount"><b>3.8</b>折</span>
+            <div class="price"><span class="orgin">原价：￥150</span><br /><span class="now">￥150</span></div>
+          </p>
+          <span class="postage">包邮</span>
+        </li>
+        <li>
+          <div class="img_wrap">
+            <a href="###"><img src="imgs/300x300.jpg" height="250" /></a>
+          </div>
+          <p class="title"><a href="###" target="_blank">粉色连衣裙搭配波点罩衫显配波，点罩衫配，波粉色连衣裙搭配波点罩衫显配波，点罩衫配，波粉色连衣裙搭配波点罩衫显配波，点罩衫配，波</a></p>
+          <p>
+            <span class="discount"><b>3.8</b>折</span>
+            <div class="price"><span class="orgin">原价：￥150</span><br /><span class="now">￥150</span></div>
+          </p>
+          <span class="postage">包邮</span>
+        </li>
+        <li>
+          <div class="img_wrap">
+            <a href="###"><img src="imgs/300x300.jpg" /></a>
+          </div>
+          <p class="title"><a href="###" target="_blank">粉色连衣裙搭配波点罩衫显配波，点罩衫配，波粉色连衣裙搭配波点罩衫显配波，点罩衫配，波粉色连衣裙搭配波点罩衫显配波，点罩衫配，波</a></p>
+          <p>
+            <span class="discount"><b>3.8</b>折</span>
+            <div class="price"><span class="orgin">原价：￥150</span><br /><span class="now">￥150</span></div>
+          </p>
+          <span class="postage">包邮</span>
+        </li>
+        <li>
+          <div class="img_wrap">
+            <a href="###"><img src="imgs/300x300.jpg" /></a>
+          </div>
+          <p class="title"><a href="###" target="_blank">粉色连衣裙搭配波点罩衫显配波，点罩衫配，波粉色连衣裙搭配波点罩衫显配波，点罩衫配，波粉色连衣裙搭配波点罩衫显配波，点罩衫配，波</a></p>
+          <p>
+            <span class="discount"><b>3.8</b>折</span>
+            <div class="price"><span class="orgin">原价：￥150</span><br /><span class="now">￥150</span></div>
+          </p>
+          <span class="postage">包邮</span>
+        </li>
+        <li>
+          <div class="img_wrap">
+            <a href="###"><img src="imgs/300x300.jpg" /></a>
+          </div>
+          <p class="title"><a href="###" target="_blank">粉色连衣裙搭配波点罩衫显配波，点罩衫配，波粉色连衣裙搭配波点罩衫显配波，点罩衫配，波粉色连衣裙搭配波点罩衫显配波，点罩衫配，波</a></p>
+          <p>
+            <span class="discount"><b>3.8</b>折</span>
+            <div class="price"><span class="orgin">原价：￥150</span><br /><span class="now">￥150</span></div>
+          </p>
+          <span class="postage">包邮</span>
+        </li>
+        <li>
+          <div class="img_wrap">
+            <a href="###"><img src="imgs/300x300.jpg" /></a>
+          </div>
+          <p class="title"><a href="###" target="_blank">粉色连衣裙搭配波点罩衫显配波，点罩衫配，波粉色连衣裙搭配波点罩衫显配波，点罩衫配，波粉色连衣裙搭配波点罩衫显配波，点罩衫配，波</a></p>
+          <p>
+            <span class="discount"><b>3.8</b>折</span>
+            <div class="price"><span class="orgin">原价：￥150</span><br /><span class="now">￥150</span></div>
+          </p>
+          <span class="postage">包邮</span>
+        </li>
+        <li>
+          <div class="img_wrap">
+            <a href="###"><img src="imgs/300x300.jpg" /></a>
+          </div>
+          <p class="title"><a href="###" target="_blank">粉色连衣裙搭配波点罩衫显配波，点罩衫配，波粉色连衣裙搭配波点罩衫显配波，点罩衫配，波粉色连衣裙搭配波点罩衫显配波，点罩衫配，波</a></p>
+          <p>
+            <span class="discount"><b>3.8</b>折</span>
+            <div class="price"><span class="orgin">原价：￥150</span><br /><span class="now">￥150</span></div>
+          </p>
+          <span class="postage">包邮</span>
+        </li>
+        <li>
+          <div class="img_wrap">
+            <a href="###"><img src="imgs/300x300.jpg" /></a>
+          </div>
+          <p class="title"><a href="###" target="_blank">粉色连衣裙搭配波点罩衫显配波，点罩衫配，波粉色连衣裙搭配波点罩衫显配波，点罩衫配，波粉色连衣裙搭配波点罩衫显配波，点罩衫配，波</a></p>
+          <p>
+            <span class="discount"><b>3.8</b>折</span>
+            <div class="price"><span class="orgin">原价：￥150</span><br /><span class="now">￥150</span></div>
+          </p>
+          <span class="postage">包邮</span>
+        </li>
+        <li>
+          <div class="img_wrap">
+            <a href="###"><img src="imgs/300x300.jpg" /></a>
+          </div>
+          <p class="title"><a href="###" target="_blank">粉色连衣裙搭配波点罩衫显配波，点罩衫配，波粉色连衣裙搭配波点罩衫显配波，点罩衫配，波粉色连衣裙搭配波点罩衫显配波，点罩衫配，波</a></p>
+          <p>
+            <span class="discount"><b>3.8</b>折</span>
+            <div class="price"><span class="orgin">原价：￥150</span><br /><span class="now">￥150</span></div>
+          </p>
+          <span class="postage">包邮</span>
+        </li>
+        <li>
+          <div class="img_wrap">
+            <a href="###"><img src="imgs/300x300.jpg" /></a>
+          </div>
+          <p class="title"><a href="###" target="_blank">粉色连衣裙搭配波点罩衫显配波，点罩衫配，波粉色连衣裙搭配波点罩衫显配波，点罩衫配，波粉色连衣裙搭配波点罩衫显配波，点罩衫配，波</a></p>
+          <p>
+            <span class="discount"><b>3.8</b>折</span>
+            <div class="price"><span class="orgin">原价：￥150</span><br /><span class="now">￥150</span></div>
+          </p>
+          <span class="postage">包邮</span>
+        </li>
+        <li>
+          <div class="img_wrap">
+            <a href="###"><img src="imgs/300x300.jpg" /></a>
+          </div>
+          <p class="title"><a href="###" target="_blank">粉色连衣裙搭配波点罩衫显配波，点罩衫配，波粉色连衣裙搭配波点罩衫显配波，点罩衫配，波粉色连衣裙搭配波点罩衫显配波，点罩衫配，波</a></p>
+          <p>
+            <span class="discount"><b>3.8</b>折</span>
+            <div class="price"><span class="orgin">原价：￥150</span><br /><span class="now">￥150</span></div>
+          </p>
+          <span class="postage">包邮</span>
+        </li>
+      </ul>
+    </div>
+    
+    <!-- S 标签云 -->
+	<div class="wrap btmcloud auto" id="">
+		<div class="border_t_b">
+			<p class="btmcloud_pad news_lAnchor">
+				<a target="_blank" href="http://www.j.cn/xkskt/xkskt_ss03?wp=btag&amp;location=list_pop" style="font-size: 19px; margin-left: 33px;" class="tags1">▲一周热搜▲</a>
+				<a target="_blank" href="http://www.j.cn/cate/j_qunzi/88/?wp=btag&amp;location=list_pop" style="font-size: 15px; margin-left: 25px;" class="tags9">蕾丝控</a>
+				<a target="_blank" href="http://www.j.cn/cate/j_qunzi/34/?wp=btag&amp;location=list_pop" style="font-size: 26px; margin-left: 31px;" class="tags1">连衣裙</a>
+				<a target="_blank" href="http://www.j.cn/cate/j_shangyi/410?wp=btag&amp;location=list_pop" style="font-size: 16px; margin-left: 30px;" class="tags2">短袖</a>
+				<a target="_blank" href="http://www.j.cn/search/s?wd=%E6%97%A0%E7%97%95%E5%86%85%E8%A3%A4&amp;wp=btag&amp;location=list_pop" style="font-size: 30px; margin-left: 30px;" class="tags6">无痕内裤</a>
+				<a target="_blank" href="http://www.j.cn/cate/j_kuzi/143/?wp=btag&amp;location=list_pop" style="font-size: 19px; margin-left: 32px;" class="tags2">短裤</a>
+				<a target="_blank" href="http://www.j.cn/shop/1642?wp=btag&amp;location=list_pop" style="font-size: 23px; margin-left: 24px;" class="tags6">泳衣</a>
+				<a target="_blank" href="http://www.j.cn/search/s?wd=%E8%A3%B8%E8%89%B2+%E8%A3%99&amp;wp=btag&amp;location=list_pop" style="font-size: 23px; margin-left: 24px;" class="tags4">裸装主义</a>
+				<a target="_blank" href="http://www.j.cn/cate/j_shangyi/98/?wp=btag&amp;location=list_pop" style="font-size: 25px; margin-left: 27px;" class="tags7">雪纺衫</a>
+				<a target="_blank" href="http://www.j.cn/j_bao/146?wp=btag&amp;location=list_pop" style="font-size: 30px; margin-left: 30px;" class="tags9">斜挎包</a>
+				<a target="_blank" href="http://www.j.cn/cate/j_qunzi/63/66?wp=btag&amp;location=list_pop" style="font-size: 29px; margin-left: 21px;" class="tags6">显白显瘦</a>
+				<a target="_blank" href="http://www.j.cn/search/s?wd=%E6%96%B0%E6%AC%BE&amp;wp=btag&amp;location=list_pop" style="font-size: 18px; margin-left: 26px;" class="tags2">夏日新款</a>
+				<a target="_blank" href="http://www.j.cn/cate/j_xiezi/411?wp=btag&amp;location=list_pop" style="font-size: 26px; margin-left: 32px;" class="tags7">夹脚凉鞋</a>
+				<a target="_blank" href="http://www.j.cn/cate/j_xiezi/234/?wp=btag&amp;location=list_pop" style="font-size: 16px; margin-left: 37px;" class="tags1">单鞋</a>
+				<a target="_blank" href="http://www.j.cn/cate/j_kuzi/151/?wp=btag&amp;location=list_pop" style="font-size: 17px; margin-left: 36px;" class="tags2">连体裤</a>
+				<a target="_blank" href="http://www.j.cn/xkskt/xkskt_wd?wp=btag&amp;location=list_pop" style="font-size: 14px; margin-left: 24px;" class="tags3">『有求必应--选款师』</a>
+				<a target="_blank" href="http://www.j.cn/xkskt/xkskt_ys01?wp=btag&amp;location=list_pop" style="font-size: 17px; margin-left: 21px;" class="tags3">《小时代》同款</a>
+				<a target="_blank" href="http://www.j.cn/abtest/static/shop_4?wp=btag&amp;location=list_pop" style="font-size: 20px; margin-left: 26px;" class="tags4">●杨幂の时尚穿搭●</a>
+				<a target="_blank" href="http://www.j.cn/j_peishi?wp=btag&amp;location=list_pop" style="font-size: 14px; margin-left: 35px;" class="tags8">有爱〃小饰物</a>
+				<a target="_blank" href="http://www.j.cn/xkskt/xkskt_sc03?wp=btag&amp;location=list_pop" style="font-size: 15px; margin-left: 26px;" class="tags9">遮掩小肚腩</a>
+				<a target="_blank" href="http://www.j.cn/xkskt/xkskt_hd03?wp=btag&amp;location=list_pop" style="font-size: 18px; margin-left: 25px;" class="tags5">那些秘密好店</a>
+				<a target="_blank" href="http://www.j.cn/xkskt/xkskt_mx03?wp=btag&amp;location=list_pop" style="font-size: 18px; margin-left: 20px;" class="tags2">姚笛″新恋爱时代</a>
+			</p>
+		</div>
+	</div>
+	<!-- E 标签云 -->
+    <div class="right_nav">
+        <ul>
+            <li class="cur">
+                <a href="javascript:;">快乐节日装</a>
+            </li>
+            <li>
+                <a href="javascript:;">轻熟见长辈</a>
+            </li>
+            <li>
+                <a href="javascript:;">屯点基本款</a>
+            </li>
+            <li>
+                <a href="javascript:;">全部</a>
+            </li>
+        </ul>
+    </div>
+    
+  </div>
+  
+  <!--侧边栏-->
+<a style="display: block;" class="newGoToTop" href="javascript:void(0)" title="回到顶部"><span class="">回到顶部</span></a>
+<!--侧边栏 end-->
+
+<!--底部-->
+<div class="footer">
+	<div class="wrap tr auto">
+		<div class="fl footer_left tl">
+			<span class="fl">用户交流QQ群:157103079<br>
+				 <a href="http://e.weibo.com/1836430855/messboard" target="_blank">提建议</a>
+			</span> 
+			<em class="fl"></em> 
+			<span class="fl">
+				 <a href="http://www.j.cn/hz/cooperation.html" target="_blank">网店寻求合作</a><br>
+				 <a href="http://www.j.cn/hz/verification.html" target="_blank">商家资质审核</a>
+				 &nbsp;&nbsp;<a href="http://www.langtaojin.com/yssm.html" target="_blank">用户隐私声明</a>
+
+
+			</span>
+		</div>
+		<p>J.cn版权所有 京ICP证090172号 北京市公安局海淀分局备案1101082154</p>
+		<a href="http://www.j.cn/hz/about.html" target="_blank" class="about_contact" >关于我们</a>
+		<a href="http://www.j.cn/hz/contact.html" target="_blank" class="about_contact" >联系我们</a>
+	</div>
+</div>
+<!--底部 end-->
+<!-- S 遮罩和换肤弹层 -->
+	<!-- S 弹层 -->
+	<div id="changeSkinBox" class="changeSkinBox" style="display: none;">
+		<div class="tit tr clearfix"><span class="fl fb f14">皮肤设置</span><a onclick="closeBox('changeSkinBox');$('#mask').hide();" class="closeskin" href="javascript:"><span class="hide">关闭</span></a></div>
+		<ul class="skin_list clearfix">
+			<li><a id="skin_default" href="javascript:"><span class="hide">太阳的味道</span></a></li>
+			<li><a id="skin_flower" href="javascript:"><span class="hide">小桃桃花坞</span></a></li>
+			<li><a id="skin_72" href="javascript:"><span class="hide">看我72变</span></a></li>
+		</ul>
+		<p class="tr"><a id="setSkin" class="ok" href="javascript:">确定</a>&emsp;<a onclick="closeBox('changeSkinBox');$('#mask').hide();" class="cancl" href="javascript:">取消</a></p>
+	</div>
+	<!-- E 弹层 -->
+	<!-- S 遮罩 -->
+	<div id="mask" style="width: 1903px; height: 6168px; display: none;"></div>
+	<!-- E 遮罩 -->
+<!-- E 遮罩和换肤弹层 -->
+
+
+
+
+
+
+</body>
+</html>
