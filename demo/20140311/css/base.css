@@ -1,0 +1,55 @@
+@charset "utf-8";
+html { font-size:16px; font-family:"Microsoft YaHei","SimHei"; background:#fff; }
+body,h1,h2,h3,h4,h5,h6,p,ol,ul,li { margin:0; padding:0; list-style:none; font-size:.8rem; }
+a { text-decoration:none; }
+a:hover { text-decoration:underline; }
+
+html { min-height:100%; background:#277E25 url(../imgs/bg01.gif) repeat-x; }
+body { min-height:695px; background:url(../imgs/bg02.gif) repeat-x left bottom; }
+
+.header,.content { width:900px; margin:0 auto; }
+
+.header { padding-top:60px; overflow:hidden; }
+	.header h1 { padding-bottom:40px; letter-spacing:.25rem; font-style:italic; font-size:1.5rem; color:#fff; font-weight:normal; text-shadow:-1px -1px 1px rgba(0,0,0,.5); opacity:.5; }
+	.header h1 strong { font-size:2rem; font-weight:normal; }
+	.header ul { position:relative; z-index:2; }
+	.header li { float:left; display:inline; margin-right:.8rem; }
+	.header li a { display:block; padding:0 10px; line-height:30px; color:#333; font-weight:700; }
+	.header li a:hover { background:rgba(255,255,255,.5); text-decoration:none; }
+	.header li.on a { background:#fff; }
+
+.content { }
+	.content .word { position:relative; z-index:1; float:left; width:490px; min-height:500px; padding:20px; overflow-y:auto; background:#fff; box-shadow:0 0 20px rgba(0,0,0,.3); }
+	.word {}
+	.word h2 { line-height:2.5rem; font-size:1rem; }
+	.word h3 { line-height:2rem; }
+	.word p,.word ul,.word ol  { padding:.25rem 0; line-height:1.5rem; }
+	.word li { margin-left:3rem; }
+	.word ul li { list-style-type:decimal; }
+	.word ol li { list-style-type:disc; }
+	.word em { color:#f39; font-style:normal; }
+	.word table,.word th,.word td { border:1px solid #ccc; }
+	.word table { border-spacing:0; border-collapse:collapse; border-collapse:separate; width:100%; border-width:1px 0 0 1px; border-radius:4px; overflow:hidden; }
+	.word th,.word td { padding:5px;  border-width:0 1px 1px 0; }
+	.word tbody tr:nth-child(odd) th,.word tbody tr:nth-child(odd) td { background:#f9f9f9; }
+	.word tbody tr:hover th,.word tbody tr:hover td { background:#f5f5f5; }
+	.word tbody:last-child tr:last-child td { border-bottom-right-radius:4px; }
+	.word thead th,.word thead td { color:#000; }
+	.word tbody th,.word tbody td { color:#666; }
+	.word .tips { background:rgba(0,0,0,.05); color:#999; border-radius:5px; text-indent:1rem; text-shadow:1px 1px 0 rgba(255,255,255,.8); }
+
+	.content .banner { float:right; overflow:hidden; width:360px; height:500px; padding:10px; margin:10px 0 0 -10px; opacity:.5; background:#fff url(../imgs/mh.jpg) no-repeat 10px 10px; }
+	.rotate {
+		/* 指定对象顺时针旋转7.5° */
+		transform:rotate(7.5deg);
+		/* FF 3.5+ */
+		-moz-transform:rotate(7.5deg); 
+		/* Opera 10.5+ */
+		-o-transform:rotate(7.5deg);
+		/* Saf3.1+, Chrome */
+		-webkit-transform:rotate(7.5deg); 
+		/* IE6 IE7*/
+		filter:progid:DXImageTransform.Microsoft.Matrix(M11=0.9914,M12=-0.1305,M21=0.1305,M22=0.9914,SizingMethod='auto expand');
+		/* IE8 */
+		-ms-filter:"progid:DXImageTransform.Microsoft.Matrix(M11=0.9914,M12=-0.1305,M21=0.1305,M22=0.9914,SizingMethod='auto expand')";
+	}
