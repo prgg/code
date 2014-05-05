@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+<head>
+<title>Demo Loading</title>
+<meta charset="utf-8">
+<style>
+i[class^="icon-"] { display:inline-block; vertical-align:middle; }
+.icon-loading { position:relative; border-radius:50%; width:50px; height:50px; background: -webkit-radial-gradient(center, ellipse cover, rgba(30,87,153,0) 0%,rgba(30,87,153,0) 0%,rgba(30,87,153,0) 60%,rgba(125,185,232,1) 61%); }
+	.icon-loading:after { -webkit-animation:loading 1s linear 3s; -webkit-animation-fill-mode:forwards; position:absolute; right:50%; top:-50%; width:0%; height:100%; overflow:hidden; content:"."; font-size:0; background:#fff; }
+@-webkit-keyframes loading {
+	0% { right:50%; top:-50%; width:0%; -webkit-transform:rotate(0deg); }
+	25% { width:25%; }
+	50% { width:50%; right:75%; -webkit-transform:rotate(-45deg); }
+	75% {  }
+	100% { width:50%; -webkit-transform:rotate(-45deg); }
+}
+</style>
+<body>
+	<i class="icon-loading"></i>
+</body>
+</html>
